@@ -3,4 +3,5 @@ This is a distributed text editor application, which means that you can edit a t
 The purpose of this project is to learn about distributed systems and the challenges of building them.
 
 ## System Architecture:
-![System Architecture](
+![System Architecture](https://github.com/BrenoFariasdaSilva/TextSync/blob/main/assets/TextSync-PT.png)
+
