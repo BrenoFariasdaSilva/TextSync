@@ -1,2 +1,2 @@
-# Distributed-Text-Editor
-Distributed-Text-Editor
+# TextSync, a Distributed-Text-Editor application.
+Welcome to TextSync! This is a distributed text editor application, which means that you can edit a text file with your friends, in real time, without the need of a server. It is based on the [Operational Transformation](https://en.wikipedia.org/wiki/Operational_transformation) algorithm, which is used by Google Docs, Etherpad and other collaborative editors.
