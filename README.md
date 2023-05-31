@@ -27,3 +27,13 @@ The system is composed of three main components: the `server`, the `client` and 
 ```
 This was a quick overview of the system architecture, but if there is also a more detailed explanation of the system architecture in the `assets` folder, in the `English` and `Portuguese` folders, which contains the DrawIO files for the System Architecture, as well as the exported images in `PNG` format, just like the one below:
 ![System Architecture](https://github.com/BrenoFariasdaSilva/TextSync/blob/main/assets/English/TextSync-EN.png)
+
+## `Project Dependencies:`
+- [NodeJS](https://nodejs.org/en/docs), which is a JavaScript runtime environment that executes JavaScript code outside a web browser, that we will use to create the server.
+- [Nodemon](https://www.npmjs.com/package/nodemon), which is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
+- [Express](https://expressjs.com/pt-br/), which is a framework for Node.js that provides a robust set of features for web and mobile applications. It's advantages are providing a full routing table, managing different HTTP requests, etc.
+- [Socket.io](https://socket.io/docs/v4), which is a JavaScript library for realtime web applications. It enables realtime, bi-directional communication between web clients and servers.
+The `package.json` file contains all the dependencies of the project, so you can install them by running the following command in the terminal:
+```bash
+npm install
+```
