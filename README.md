@@ -1,6 +1,6 @@
-# Welcome to `TextSync` - A Real-Time Distributed-Text-Editor Application!
+# Welcome to [`TextSync`](https://github.com/BrenoFariasdaSilva/TextSync) - A Real-Time Distributed-Text-Editor Application!
 
-### `Project Status: Under Development`
+#### `Project Status: Under Development`
 
 #### `Project TO-DO List:`
 - TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge)
@@ -35,5 +35,5 @@ This was a quick overview of the system architecture, but if there is also a mor
 - [Socket.io](https://socket.io/docs/v4), which is a JavaScript library for realtime web applications. It enables realtime, bi-directional communication between web clients and servers.
 The `package.json` file contains all the dependencies of the project, so you can install them by running the following command in the terminal:
 ```bash
-npm install
+make dependencies
 ```
