@@ -1,2 +1,5 @@
+run_server:
+	cd server && npm run dev
+
 dependencies:
-	npm install
+	cd server && npm install
