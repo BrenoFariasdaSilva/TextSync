@@ -1,18 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TextSync</title>
-    <link rel="stylesheet" href="style.css">
+  <title>TextSync</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #212121;
+      color: #fff;
+    }
+    
+    .header {
+      background-color: #1a1a1a;
+      padding: 10px;
+    }
+    
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #4285f4;
+      text-align: center;
+    }
+    
+    .main {
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .main h2 {
+      color: #4285f4;
+    }
+    
+    .main p {
+      color: #ccc;
+      font-size: 16px;
+    }
+    
+    .button {
+      background-color: #4285f4;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    
+    .button:hover {
+      background-color: #3367d6;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>TextSync</h1>
-        <p>Sync your text with your friends</p>
-        <form id="create-room" action="create-room.php" method="POST">
-            <input type="text" name="room-name" placeholder="Room name">
-            <input type="submit" value="Create room"> 
-    </header>
+  <div class="header">
+    <h1>TextSync</h1>
+  </div>
+  
+  <div class="main">
+    <h2>Welcome to TextSync</h2>
+    <p>Start creating and editing your documents now.</p>
+    <button class="button">Create New Document</button>
+  </div>
 </body>
 </html>
