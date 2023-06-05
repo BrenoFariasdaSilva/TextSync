@@ -1,5 +1,7 @@
 run_server:
-	cd server && npm start
+	clear;
+	cd server && nodemon server.js
 
 dependencies:
+	clear;
 	cd server && npm install

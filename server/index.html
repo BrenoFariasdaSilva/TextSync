@@ -2,55 +2,9 @@
 <html>
 <head>
   <title>TextSync</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #212121;
-      color: #fff;
-    }
-    
-    .header {
-      background-color: #1a1a1a;
-      padding: 10px;
-    }
-    
-    .header h1 {
-      margin: 0;
-      font-size: 24px;
-      color: #4285f4;
-      text-align: center;
-    }
-    
-    .main {
-      padding: 20px;
-      text-align: center;
-    }
-    
-    .main h2 {
-      color: #4285f4;
-    }
-    
-    .main p {
-      color: #ccc;
-      font-size: 16px;
-    }
-    
-    .button {
-      background-color: #4285f4;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    
-    .button:hover {
-      background-color: #3367d6;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="header">
@@ -60,7 +14,16 @@
   <div class="main">
     <h2>Welcome to TextSync</h2>
     <p>Start creating and editing your documents now.</p>
-    <button class="button">Create New Document</button>
+    <button class="button" id="createNewDocument">Create New Document</button>
   </div>
+  <script>
+    $(function () {
+      const socket = io();
+      $('#button').click(function() {
+        socket.emit('create');
+        return false;
+      });
+    });
+  </script>
 </body>
 </html>
