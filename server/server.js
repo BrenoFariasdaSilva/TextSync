@@ -37,10 +37,4 @@ serverSocket.on('connection', function (socket) {
     socket.on('disconnect', function () {
         console.log(colorizeText('Client disconnected with id: ' + socket.id, redColor));
     });
-    
-    // Create a function to change the page when user clicks on the button
-    socket.on('changePage', function () {
-        console.log(colorizeText('Client clicked on the Create New Document button', yellowColor));
-        serverSocket.emit('changePage');
-    });
 });
