@@ -19,7 +19,7 @@ app.use(express.static('assets')); // serve static files from public folder
 const http = require('http').Server(app); // import http module and pass express app to it
 const serverSocket = require('socket.io')(http); // import socket.io and pass the http object (server)
 
-const port = process.env.PORT || 7000;
+const port = process.env.PORT || 7070;
 
 http.listen(port, function () {
     console.log(colorizeText(`Server is listening on port ${port}`, greenColor));
