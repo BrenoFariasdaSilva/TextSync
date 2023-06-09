@@ -1,11 +1,16 @@
-import React from 'react'
-import { useEffect } from 'react';
+import React from "react";
+import { useCallback } from "react";
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
 
 export default function TextEditor() {
-    useEffect(() => { // useEffect is a hook that runs when the component is mounted. This makes it so that the editor is only rendered once the component is mounted.
-        new Quill("#container", { theme: "snow" }) // This creates a new Quill object and renders it in the div with id="container".
-    }, [])
-    return <div id="container"></div>
+   const wrapperRef = useCallback(wrapper => { // This creates a reference to the div with id="container".
+      if (wrapper == null) return; // If the div with id="container" does not exist, then return.
+
+      wrapper.innerHTML = ""; // This clears the div with id="container".
+      const editor = document.createElement("div"); // This creates a div element.
+      wrapper.append(editor); // This appends the div element to the div with id="container".
+      new Quill(editor, { theme: "snow" }); // This creates a Quill object.
+   }, []);
+   return <div id="container" ref={wrapperRef}></div>
 }
