@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function TextEditor() {
   return (
-    <div>TextEditor</div>
+    <div>Text Editor</div>
   )
 }
