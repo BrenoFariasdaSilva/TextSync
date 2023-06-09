@@ -6,3 +6,7 @@ run_server:
 dependencies:
 	clear;
 	cd server && npm install
+	npm i ngx-quill
+
+new_project:
+	npx create-react-app projectNameHere
