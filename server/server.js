@@ -8,11 +8,11 @@ const io = require('socket.io')(server, {
     // Configure Cross-Origin Resource Sharing (CORS)
     cors: {
       // Define the allowed origin for cross-origin requests
-      origin: "http://localhost:3000",
+      origin: `${process.env.CLIENT_ADDRESS}:${process.env.CLIENT_PORT}`,
       // Specify the allowed HTTP methods for cross-origin requests
       methods: ["GET", "POST"]
     }
-  });
+});
   
 // io.on is a listener for incoming connections
 io.on('connection', (socket) => {});
