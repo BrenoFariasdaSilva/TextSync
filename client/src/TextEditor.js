@@ -1,10 +1,13 @@
 // Import the necessary modules from the 'react' package
 import React from "react";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 
 // Import the 'Quill' library and its styles
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
+
+// Import the 'socket.io-client' package
+import { io } from "socket.io-client";
 
 // Define the toolbar options for the Quill editor
 const TOOLBAR_OPTIONS = [
@@ -21,6 +24,13 @@ const TOOLBAR_OPTIONS = [
 
 // Define the 'TextEditor' component
 export default function TextEditor() {
+   useEffect(() => {
+      const socket = io("http://localhost:3001");
+      return () => {
+         socket.disconnect();
+      }
+   }, []);
+
   // Create a callback using 'useCallback' to store a reference to the container div
   const wrapperRef = useCallback((wrapper) => {
     // If the div with id="container" does not exist, then return
