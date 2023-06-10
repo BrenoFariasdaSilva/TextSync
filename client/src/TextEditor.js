@@ -9,6 +9,9 @@ import "quill/dist/quill.snow.css";
 // Import the 'socket.io-client' package
 import { io } from "socket.io-client";
 
+// This loads the .env file from the root directory of the client.
+require('dotenv').config({ path: './.env' });
+
 // Define the toolbar options for the Quill editor
 const TOOLBAR_OPTIONS = [
   [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -24,9 +27,12 @@ const TOOLBAR_OPTIONS = [
 
 // Define the 'TextEditor' component
 export default function TextEditor() {
+   // Create a side effect using 'useEffect' to connect to the server
    useEffect(() => {
-      const socket = io("http://localhost:3001");
+      // Create a new socket.io-client instance and connect to the server
+      const socket = io(`${process.env.CLIENT_ADDRESS}:${process.env.CLIENT_PORT}`);
       return () => {
+         // Disconnect from the server when the component unmounts
          socket.disconnect();
       }
    }, []);
