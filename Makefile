@@ -1,4 +1,10 @@
-projectName = "textsync"
+PROJECT_NAME = textsync
+
+all: 
+	clear;
+	dependencies;
+	run_server;
+	run_client;
 
 run_server:
 	clear;
@@ -15,4 +21,4 @@ dependencies:
 	cd ../server && npm install
 
 new_project:
-	npx create-react-app projectName
+	npx create-react-app $(PROJECT_NAME)
