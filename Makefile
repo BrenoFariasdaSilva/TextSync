@@ -22,3 +22,5 @@ dependencies:
 
 new_project:
 	npx create-react-app $(PROJECT_NAME)
+
+.PHONY: create-react-app
