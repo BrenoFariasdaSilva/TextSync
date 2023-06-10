@@ -3,8 +3,12 @@
 }
 
 body {
-    background-color: grey;
+    background-color: rgb(255, 255, 255);
     margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 132vh;
 }
 
 .container .ql-editor {
@@ -13,5 +17,5 @@ body {
     padding: 1in;
     margin: 1rem;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-    background-color: white;
+    background-color: white
 }
