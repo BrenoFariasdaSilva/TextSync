@@ -1,62 +1,71 @@
+/* Apply box-sizing: border-box to all elements and pseudo-elements */
 *, *::before, *::after {
-  box-sizing: border-box;
-}
-
-body {
-    background-color: rgb(255, 255, 255);
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 132vh;
-}
-
-.container .ql-editor {
-    width: 8.5in;
-    min-height: 11in;
-    padding: 1in;
-    margin: 1rem;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-    background-color: white
-}
-
-.container .ql-container.ql-snow {
-    border: none;
-    display: flex;
-    justify-content: center;
-}
-
-.container .ql-toolbar.ql-snow {
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: white;
-    border: none;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-}
-
-@page {
-    margin: 1in;
-}
-
-@media print {
-    body {
-        background: none;
-    }
-
-    .container .ql-editor {
-        width: 6.5in;
-        height: 9in;
-        padding: 0;
-        margin: 0;
-        box-shadow: none;
-        align-self: flex-start;
-    
-    }
-
-    .container .ql-toolbar.ql-snow {
-        display: none;
-    }
-}
+    box-sizing: border-box;
+  }
+  
+  /* Body styles */
+  body {
+      background-color: rgb(255, 255, 255);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 132vh;
+  }
+  
+  /* Styles for the container and Quill editor */
+  .container .ql-editor {
+      width: 8.5in;
+      min-height: 11in;
+      padding: 1in;
+      margin: 1rem;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+      background-color: white;
+  }
+  
+  /* Styles for the container and Quill snow theme */
+  .container .ql-container.ql-snow {
+      border: none;
+      display: flex;
+      justify-content: center;
+  }
+  
+  /* Styles for the container and Quill toolbar in snow theme */
+  .container .ql-toolbar.ql-snow {
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background-color: white;
+      border: none;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Page margin settings */
+  @page {
+      margin: 1in;
+  }
+  
+  /* Print styles */
+  @media print {
+      body {
+          background: none;
+      }
+  
+      /* Adjusted styles for printing */
+      .container .ql-editor {
+          width: 6.5in;
+          height: 9in;
+          padding: 0;
+          margin: 0;
+          box-shadow: none;
+          align-self: flex-start;
+      }
+  
+      /* Hide toolbar during printing */
+      .container .ql-toolbar.ql-snow {
+          display: none;
+      }
+  }
+  
