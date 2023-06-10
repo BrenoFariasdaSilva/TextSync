@@ -12,5 +12,5 @@ export default function TextEditor() {
       wrapper.append(editor); // This appends the div element to the div with id="container".
       new Quill(editor, { theme: "snow" }); // This creates a Quill object.
    }, []);
-   return <div id="container" ref={wrapperRef}></div>
+   return <div className="container" ref={wrapperRef}></div>
 }
