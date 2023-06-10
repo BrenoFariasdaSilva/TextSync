@@ -15,4 +15,6 @@ const io = require('socket.io')(server, {
 });
   
 // io.on is a listener for incoming connections
-io.on('connection', (socket) => {});
+io.on('connection', (socket) => {
+    console.log(`User connected: ${socket.id}`);
+});
