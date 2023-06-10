@@ -19,3 +19,9 @@ body {
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
     background-color: white
 }
+
+.container ql-container.ql-snow {
+    border: none;
+    display: flex;
+    justify-content: center;
+}
