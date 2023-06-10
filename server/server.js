@@ -8,7 +8,7 @@ const io = require('socket.io')(server, {
     // Configure Cross-Origin Resource Sharing (CORS)
     cors: {
       // Define the allowed origin for cross-origin requests
-      origin: `${process.env.CLIENT_ADDRESS}:${process.env.CLIENT_PORT}`,
+      origin: `${process.env.SERVER_ADDRESS}:${process.env.SERVER_PORT}`,
       // Specify the allowed HTTP methods for cross-origin requests
       methods: ["GET", "POST"]
     }
