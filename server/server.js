@@ -6,3 +6,5 @@ const io = require('socket.io')(server, {
         methods: ["GET", "POST"]
     }
 });
+
+io.on('connection', (socket) => {});
