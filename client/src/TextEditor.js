@@ -14,15 +14,15 @@ require('dotenv').config({ path: './.env' });
 
 // Define the toolbar options for the Quill editor
 const TOOLBAR_OPTIONS = [
-  [{ header: [1, 2, 3, 4, 5, 6, false] }],
-  [{ font: [] }],
-  [{ list: "ordered" }, { list: "bullet" }],
-  ["bold", "italic", "underline"],
-  [{ color: [] }, { background: [] }],
-  [{ script: "sub" }, { script: "super" }],
-  [{ align: [] }],
-  ["image", "blockquote", "code-block"],
-  ["clean"],
+   [{ header: [1, 2, 3, 4, 5, 6, false] }],
+   [{ font: [] }],
+   [{ list: "ordered" }, { list: "bullet" }],
+   ["bold", "italic", "underline"],
+   [{ color: [] }, { background: [] }],
+   [{ script: "sub" }, { script: "super" }],
+   [{ align: [] }],
+   ["image", "blockquote", "code-block"],
+   ["clean"],
 ];
 
 // Define the 'TextEditor' component
@@ -37,24 +37,24 @@ export default function TextEditor() {
       }
    }, []);
 
-  // Create a callback using 'useCallback' to store a reference to the container div
-  const wrapperRef = useCallback((wrapper) => {
-    // If the div with id="container" does not exist, then return
-    if (wrapper == null) return;
+   // Create a callback using 'useCallback' to store a reference to the container div
+   const wrapperRef = useCallback((wrapper) => {
+      // If the div with id="container" does not exist, then return
+      if (wrapper == null) return;
 
-    // Clear the content of the container div
-    wrapper.innerHTML = "";
+      // Clear the content of the container div
+      wrapper.innerHTML = "";
 
-    // Create a new div element for the Quill editor
-    const editor = document.createElement("div");
+      // Create a new div element for the Quill editor
+      const editor = document.createElement("div");
 
-    // Append the Quill editor div to the container div
-    wrapper.append(editor);
+      // Append the Quill editor div to the container div
+      wrapper.append(editor);
 
-    // Create a new Quill object with specified options
-    new Quill(editor, { theme: "snow", modules: { toolbar: TOOLBAR_OPTIONS } });
-  }, []);
+      // Create a new Quill object with specified options
+      new Quill(editor, { theme: "snow", modules: { toolbar: TOOLBAR_OPTIONS } });
+   }, []);
 
-  // Render the container div and assign the wrapperRef callback as the 'ref' attribute
-  return <div className="container" ref={wrapperRef}></div>;
+   // Render the container div and assign the wrapperRef callback as the 'ref' attribute
+   return <div className="container" ref={wrapperRef}></div>;
 }
