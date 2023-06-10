@@ -14,7 +14,7 @@ run_client:
 	clear;
 	cd client && npm start
 
-# Add rule to install everything, node, npm, react, etc.
+# Add rule to install everything, node, npm, react, etc on windows, linux and mac
 dependencies:
 	clear;
 	cd client && npm install
