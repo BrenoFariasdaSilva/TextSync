@@ -40,3 +40,9 @@ body {
 @page {
     margin: 1in;
 }
+
+@media print {
+    body {
+        background: none;
+    }
+}
