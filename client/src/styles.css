@@ -20,13 +20,13 @@ body {
     background-color: white
 }
 
-.container ql-container.ql-snow {
+.container .ql-container.ql-snow {
     border: none;
     display: flex;
     justify-content: center;
 }
 
-.container ql-toolbar.ql-snow {
+.container .ql-toolbar.ql-snow {
     display: flex;
     justify-content: center;
     position: sticky;
