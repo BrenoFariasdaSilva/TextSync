@@ -30,7 +30,7 @@ export default function TextEditor() {
    // Create a side effect using 'useEffect' to connect to the server
    useEffect(() => {
       // Create a new socket.io-client instance and connect to the server
-      const socket = io(`${process.env.CLIENT_ADDRESS}:${process.env.CLIENT_PORT}`);
+      const socket = io(`${process.env.SERVER_ADDRESS}:${process.env.SERVER_PORT}`);
       return () => {
          // Disconnect from the server when the component unmounts
          socket.disconnect();
