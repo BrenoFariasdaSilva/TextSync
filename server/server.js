@@ -42,10 +42,11 @@ io.on("connection", socket => { // socket is an object that represents the clien
 
    socket.on("send-changes", delta => { // delta is the change in the text
       socket.broadcast.emit("receive-changes", delta); // broadcast the change to all other clients, except the sender
-   })
+   });
 
    socket.on("save-document", async data => { // data is the document data
       await Document.findByIdAndUpdate(documentId, { data }); // update the document data
+   });
 });
 
 // Define the default value for the document data
@@ -63,4 +64,4 @@ async function findOrCreateDocumentById(id) {
 
    // If the document does not exist, create it
    return await Document.create({ _id: id, data: defaultValue });
-}
+};
