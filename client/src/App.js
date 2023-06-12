@@ -15,7 +15,18 @@ import {
 // Define the 'App' component
 function App() {
    // Render the 'TextEditor' component
-   return <TextEditor />;
+   return (
+      <Router> // Wrap the 'TextEditor' component in a 'Router' component
+         <Switch> 
+            <Route path="/" exact> // Define the route for the home page
+               <Redirect to={`/documents/`} />
+            </Route>
+            <Route path="/documents/:id"> // Define the route for the document page
+               <TextEditor /> // Render the 'TextEditor' component
+            </Route>
+         </Switch>
+      </Router>
+   )
 }
 
 // Export the 'App' component as the default export
