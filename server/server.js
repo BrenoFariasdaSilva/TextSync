@@ -44,3 +44,17 @@ io.on("connection", socket => { // socket is an object that represents the clien
       socket.broadcast.emit("receive-changes", delta); // broadcast the change to all other clients, except the sender
    })
 });
+
+// Desc: Find or create a document by its id
+async function findOrCreateDocumentById(id) {
+   if (id == null) return; // if id is null, return
+
+   // Find the document by its id
+   const document = await Document.findById(id);
+
+   // If the document exists, return it
+   if (document) return document;
+
+   // If the document does not exist, create it
+   return await Document.create({ _id: id, data: "" });
+}
