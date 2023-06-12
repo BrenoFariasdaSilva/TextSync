@@ -14,6 +14,9 @@ import { io } from "socket.io-client";
 // Load the environment variables from the '.env' file
 dotenv.config();
 
+// Define the save interval in milliseconds
+const SAVE_INTERVAL_MS = 1000; // Define the save interval in milliseconds
+
 // Define the toolbar options for the Quill editor
 const TOOLBAR_OPTIONS = [
    [{ header: [1, 2, 3, 4, 5, 6, false] }],
@@ -52,6 +55,18 @@ export default function TextEditor() {
 
       socket.emit("get-document", documentId); // Send a 'get-document' event to the server passing the document id
    }, [socket, quill, document, documentId]);
+
+   useEffect(() => {
+      if (socket == null || quill == null) return;
+
+      const interval = setInterval(() => {
+         socket.emit("save-document", quill.getContents());
+      }, SAVE_INTERVAL_MS);
+
+      return () => {
+         clearInterval(interval);
+      }
+   }, [socket, quill]);
 
    // Create a side effect using 'useEffect' to update the editor
    useEffect(() => {
