@@ -7,26 +7,25 @@ import TextEditor from "./TextEditor";
 // Import the necessary modules from the 'react-router-dom' package
 import {
    BrowserRouter as Router,
-   Switch,
+   Routes,
    Route,
-   Redirect,
+   Navigate,
 } from "react-router-dom";
+
+// Import the 'uuid' package
+import { v4 as uuidV4 } from "uuid";
 
 // Define the 'App' component
 function App() {
    // Render the 'TextEditor' component
    return (
-      <Router> // Wrap the 'TextEditor' component in a 'Router' component
-         <Switch> 
-            <Route path="/" exact> // Define the route for the home page
-               <Redirect to={`/documents/`} />
-            </Route>
-            <Route path="/documents/:id"> // Define the route for the document page
-               <TextEditor /> // Render the 'TextEditor' component
-            </Route>
-         </Switch>
+      <Router>
+         <Routes>
+            <Route path="/" element={<Navigate to={`/documents/${uuidV4()}`} />} />
+            <Route path="/documents/:id" element={<TextEditor />} />
+         </Routes>
       </Router>
-   )
+   );
 }
 
 // Export the 'App' component as the default export
