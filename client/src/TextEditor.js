@@ -1,6 +1,7 @@
 // Import the necessary modules from the 'react' package
 import React from "react";
 import { useCallback, useEffect, useState } from "react";
+import dotenv from  'dotenv';
 
 // Import the 'Quill' library and its styles
 import Quill from "quill";
@@ -9,8 +10,8 @@ import "quill/dist/quill.snow.css";
 // Import the 'socket.io-client' package
 import { io } from "socket.io-client";
 
-// This loads the .env file from the root directory of the client.
-require('dotenv').config({ path: './.env' });
+// Load the environment variables from the '.env' file
+dotenv.config();
 
 // Define the toolbar options for the Quill editor
 const TOOLBAR_OPTIONS = [
@@ -32,7 +33,7 @@ export default function TextEditor() {
    // Create a side effect using 'useEffect' to connect to the server
    useEffect(() => {
       // Create a new socket.io-client instance and connect to the server
-      const s = io(`${process.env.SERVER_ADDRESS}:${process.env.SERVER_PORT}`);
+      const s = io(`${process.env.REACT_APP_SERVER_ADDRESS}:${process.env.REACT_APP_SERVER_PORT}`);
       setSocket(s);
       return () => {
          // Disconnect from the server when the component unmounts
