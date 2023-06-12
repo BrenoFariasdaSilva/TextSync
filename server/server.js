@@ -8,11 +8,9 @@ const mongoose = require("mongoose");
 // Import the 'Document' model
 const Document = require("./Document");
 // Connect to the MongoDB database
-mongoose.connect(process.env.DATABASE_ADDRESS, {
+mongoose.connect(process.env.DATABASE_URI, {
    useNewUrlParser: true,
-   useUnifiedTopology: true,
-   useFindAndModify: false,
-   useCreateIndex: true
+   useUnifiedTopology: true
 }).then(() => console.log("MongoDB connected successfully"))
 
 // Import the 'http' package
@@ -64,4 +62,4 @@ async function findOrCreateDocumentById(id) {
 
    // If the document does not exist, create it
    return await Document.create({ _id: id, data: defaultValue });
-};
+}
