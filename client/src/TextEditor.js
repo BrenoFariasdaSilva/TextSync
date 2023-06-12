@@ -60,6 +60,23 @@ export default function TextEditor() {
       }
    }, [socket, quill]);
 
+   useEffect(() => {
+      if (socket == null || quill == null) return;
+
+      // Add a listener to the 'text-change' event of the Quill editor
+      const handler = (delta) => {
+         quill.updateContents(delta);
+      }
+
+      // Add the listener to emit the 'text-change' event
+      socket.on("receive-changes", handler);
+
+      // Return a cleanup function to remove the listener
+      return () => {
+         socket.off("receive-changes");
+      }
+   }, [socket, quill]);
+
    // Create a callback using 'useCallback' to store a reference to the container div
    const wrapperRef = useCallback((wrapper) => {
       // If the div with id="container" does not exist, then return
