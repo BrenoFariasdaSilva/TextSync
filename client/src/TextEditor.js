@@ -1,16 +1,16 @@
-// Import the necessary modules from the "react" package
+// Import the necessary modules from the 'react' package
 import React from "react";
 import { useCallback, useEffect } from "react";
 
-// Import the "Quill" library and its styles
+// Import the 'Quill' library and its styles
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
 
-// Import the "socket.io-client" package
+// Import the 'socket.io-client' package
 import { io } from "socket.io-client";
 
 // This loads the .env file from the root directory of the client.
-require("dotenv").config({ path: "./.env" });
+require('dotenv').config({ path: './.env' });
 
 // Define the toolbar options for the Quill editor
 const TOOLBAR_OPTIONS = [
@@ -25,9 +25,9 @@ const TOOLBAR_OPTIONS = [
    ["clean"],
 ];
 
-// Define the "TextEditor" component
+// Define the 'TextEditor' component
 export default function TextEditor() {
-   // Create a side effect using "useEffect" to connect to the server
+   // Create a side effect using 'useEffect' to connect to the server
    useEffect(() => {
       // Create a new socket.io-client instance and connect to the server
       const socket = io(`${process.env.SERVER_ADDRESS}:${process.env.SERVER_PORT}`);
@@ -37,7 +37,7 @@ export default function TextEditor() {
       }
    }, []);
 
-   // Create a callback using "useCallback" to store a reference to the container div
+   // Create a callback using 'useCallback' to store a reference to the container div
    const wrapperRef = useCallback((wrapper) => {
       // If the div with id="container" does not exist, then return
       if (wrapper == null) return;
@@ -55,6 +55,6 @@ export default function TextEditor() {
       new Quill(editor, { theme: "snow", modules: { toolbar: TOOLBAR_OPTIONS } });
    }, []);
 
-   // Render the container div and assign the wrapperRef callback as the "ref" attribute
+   // Render the container div and assign the wrapperRef callback as the 'ref' attribute
    return <div className="container" ref={wrapperRef}></div>;
 }
