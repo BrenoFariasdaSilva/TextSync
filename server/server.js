@@ -21,9 +21,8 @@ const io = require("socket.io")(server, {
 });
   
 // io.on is a listener for incoming connections
-io.on("connection", socket => {
-   socket.on("send-changes", delta => {
-      console.log(`User ${socket.id} sent changes`);
-      console.log(delta);
+io.on("connection", socket => { // socket is an object that represents the client
+   socket.on("send-changes", delta => { // delta is the change in the text
+      socket.broadcast.emit("receive-changes", delta); // broadcast the change to all other clients, except the sender
    })
 });
