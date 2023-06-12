@@ -1,6 +1,6 @@
 // Import the necessary modules from the 'react' package
 import React from "react";
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 // Import the 'Quill' library and its styles
 import Quill from "quill";
@@ -27,13 +27,16 @@ const TOOLBAR_OPTIONS = [
 
 // Define the 'TextEditor' component
 export default function TextEditor() {
+   const [socket, setSocket] = useState();
+   const [quill, setQuill] = useState();
    // Create a side effect using 'useEffect' to connect to the server
    useEffect(() => {
       // Create a new socket.io-client instance and connect to the server
-      const socket = io(`${process.env.SERVER_ADDRESS}:${process.env.SERVER_PORT}`);
+      const s = io(`${process.env.SERVER_ADDRESS}:${process.env.SERVER_PORT}`);
+      setSocket(s);
       return () => {
          // Disconnect from the server when the component unmounts
-         socket.disconnect();
+         s.disconnect();
       }
    }, []);
 
