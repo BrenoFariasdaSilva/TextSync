@@ -5,6 +5,8 @@ require("dotenv").config({ path: "./.env" });
 
 // Import the 'mongoose' package
 const mongoose = require("mongoose");
+// Import the 'Document' model
+const Document = require("./Document");
 // Connect to the MongoDB database
 mongoose.connect(process.env.DATABASE_ADDRESS, {
    useNewUrlParser: true,
