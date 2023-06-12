@@ -55,7 +55,8 @@ export default function TextEditor() {
       wrapper.append(editor);
 
       // Create a new Quill object with specified options
-      new Quill(editor, { theme: "snow", modules: { toolbar: TOOLBAR_OPTIONS } });
+      const q = new Quill(editor, { theme: "snow", modules: { toolbar: TOOLBAR_OPTIONS } });
+      setQuill(q);
    }, []);
 
    // Render the container div and assign the wrapperRef callback as the 'ref' attribute
