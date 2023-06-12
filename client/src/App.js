@@ -4,6 +4,14 @@ import React from "react";
 // Import the 'TextEditor' component from the './TextEditor' file
 import TextEditor from "./TextEditor";
 
+// Import the necessary modules from the 'react-router-dom' package
+import {
+   BrowserRouter as Router,
+   Switch,
+   Route,
+   Redirect,
+} from "react-router-dom";
+
 // Define the 'App' component
 function App() {
    // Render the 'TextEditor' component
