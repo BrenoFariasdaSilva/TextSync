@@ -2,6 +2,7 @@
 import React from "react";
 import { useCallback, useEffect, useState } from "react";
 import dotenv from  'dotenv';
+import { useParams } from "react-router-dom";
 
 // Import the 'Quill' library and its styles
 import Quill from "quill";
@@ -28,6 +29,7 @@ const TOOLBAR_OPTIONS = [
 
 // Define the 'TextEditor' component
 export default function TextEditor() {
+   const { id: documentId } = useParams();
    const [socket, setSocket] = useState();
    const [quill, setQuill] = useState();
    // Create a side effect using 'useEffect' to connect to the server
@@ -40,6 +42,16 @@ export default function TextEditor() {
          s.disconnect();
       }
    }, []);
+
+   useEffect(() => {
+      if (socket == null || quill == null) return;
+      socket.once("load-document", document => {
+         quill.setContents(document);
+         quill.enable();
+      });
+      
+      socket.emit("get-document", documentId); // Send a 'get-document' event to the server passing the document id
+   }, [socket, quill, document, documentId]);
 
    // Create a side effect using 'useEffect' to update the editor
    useEffect(() => {
