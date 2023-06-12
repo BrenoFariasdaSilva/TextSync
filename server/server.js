@@ -3,6 +3,7 @@
 // This loads the .env file from the root directory of the server.
 require("dotenv").config({ path: "./.env" });
 
+// Import the 'http' package
 const server = require("http").createServer();
 server.listen(process.env.SERVER_PORT, () => {
    console.log(`Server listening on port ${process.env.SERVER_PORT}`);
@@ -20,6 +21,7 @@ const io = require("socket.io")(server, {
 });
   
 // io.on is a listener for incoming connections
-io.on("connection", (socket) => {
+io.on("connection", socket => {
+   console.log('Joined');
    console.log(`User connected: ${socket.id}`);
 });
