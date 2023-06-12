@@ -45,6 +45,7 @@ io.on("connection", socket => { // socket is an object that represents the clien
    })
 });
 
+// Define the default value for the document data
 const defaultValue = "";
 
 // Desc: Find or create a document by its id
