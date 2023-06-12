@@ -49,7 +49,7 @@ export default function TextEditor() {
          quill.setContents(document);
          quill.enable();
       });
-      
+
       socket.emit("get-document", documentId); // Send a 'get-document' event to the server passing the document id
    }, [socket, quill, document, documentId]);
 
@@ -105,6 +105,8 @@ export default function TextEditor() {
 
       // Create a new Quill object with specified options
       const q = new Quill(editor, { theme: "snow", modules: { toolbar: TOOLBAR_OPTIONS } });
+      q.disable();
+      q.setText("Loading...");
       setQuill(q);
    }, []);
 
