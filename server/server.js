@@ -34,10 +34,10 @@ const io = require("socket.io")(server, {
   
 // io.on is a listener for incoming connections
 io.on("connection", socket => { // socket is an object that represents the client
-   socket.on("get-document", documentId => { // documentId is the id of the document
-      const data = ""; // TODO: Get document from database
+   socket.on("get-document", async documentId => { // documentId is the id of the document
+      const document = await findOrCreateDocumentById(documentId); // find or create the document by its id
       socket.join(documentId); // join the room identified by the documentId
-      socket.emit("load-document", data); // emit a 'load-document' event to the client
+      socket.emit("load-document", document.data); // emit a 'load-document' event to the client
    });
 
    socket.on("send-changes", delta => { // delta is the change in the text
