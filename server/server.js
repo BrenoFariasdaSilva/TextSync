@@ -3,6 +3,16 @@
 // This loads the .env file from the root directory of the server.
 require("dotenv").config({ path: "./.env" });
 
+// Import the 'mongoose' package
+const mongoose = require("mongoose");
+// Connect to the MongoDB database
+mongoose.connect(process.env.DATABASE_ADDRESS, {
+   useNewUrlParser: true,
+   useUnifiedTopology: true,
+   useFindAndModify: false,
+   useCreateIndex: true
+}).then(() => console.log("MongoDB connected successfully"))
+
 // Import the 'http' package
 const server = require("http").createServer();
 server.listen(process.env.SERVER_PORT, () => {
