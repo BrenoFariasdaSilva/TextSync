@@ -45,6 +45,8 @@ io.on("connection", socket => { // socket is an object that represents the clien
    })
 });
 
+const defaultValue = "";
+
 // Desc: Find or create a document by its id
 async function findOrCreateDocumentById(id) {
    if (id == null) return; // if id is null, return
@@ -56,5 +58,5 @@ async function findOrCreateDocumentById(id) {
    if (document) return document;
 
    // If the document does not exist, create it
-   return await Document.create({ _id: id, data: "" });
+   return await Document.create({ _id: id, data: defaultValue });
 }
