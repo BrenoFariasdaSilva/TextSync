@@ -43,7 +43,7 @@ io.on("connection", socket => { // socket is an object that represents the clien
    });
 
    socket.on("save-document", async data => { // data is the document data
-      await Document.findByIdAndUpdate(documentId, { data }); // update the document data
+      await Document.findByIdAndUpdate(data._id, { data }); // update the document data
    });
 });
 
