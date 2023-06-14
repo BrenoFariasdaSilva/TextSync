@@ -40,7 +40,7 @@ The service interface is composed of the following commands:
   - ***`Return`***:
     - ***`load-document`***: The event that will be sent to the client, so that it can update the text editor UI with the document data. 
   
-	- ***`load-document`***: This event is a response of the server from a `get-document` request, which is used to update the text editor UI with the document data.
+- ***`load-document`***: This event is a response of the server from a `get-document` request, which is used to update the text editor UI with the document data.
   - ***`Parameters`***:
     - ***`document`***: The document data.
   - ***`Return`***:
@@ -59,13 +59,13 @@ The service interface is composed of the following commands:
   - ***`Return`***:
     - ***`none`***;
 
-- ***``***: 
+- ***`save-document`***: 
   - ***`Parameters`***:
     - ***``***:
   - ***`Return`***:
-    - ***``***:
+    - ***`none`***;
 
-- ***``***: 
+- ***``***:  
   - ***`Parameters`***:
     - ***``***:
   - ***`Return`***:
