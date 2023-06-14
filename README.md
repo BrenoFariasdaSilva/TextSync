@@ -6,6 +6,7 @@
 - TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge)
 - TODO: Use [fly](https://fly.io/) to deploy the application, as an alternative to [Heroku](https://www.heroku.com/)
 - TODO: MongoDB replication, see [here](https://docs.mongodb.com/manual/replication/)
+- TODO: MongoDB Dockerfile, see [here](https://hub.docker.com/_/mongo)
 
 #### `Project New Fatures to implement:`
 - TODO: Add read and write permissions for each file.  
