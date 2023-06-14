@@ -9,7 +9,10 @@
 - TODO: Use [fly](https://fly.io/) to deploy the application, as an alternative to [Heroku](https://www.heroku.com/)
 
 #### `Project New Fatures to implement:`
+- TODO: Add a `share` button to the application, so that each user can share their documents with other users.
+- TODO: Add the option to name the documents, so that each user can have multiple documents.
 - TODO: Add read and write permissions for each file.  
+- TODO: Add a `login` and `register` page to the application, so that each user can have their own documents.
 
 ## `Project Description:`
 This is a distributed text editor application, which means that you can edit a text file with your friends, in real time.
@@ -28,6 +31,8 @@ The system is composed of three main components: the `server`, the `client` and 
 	```
 This was a quick overview of the system architecture, but if there is also a more detailed explanation of the system architecture in the `assets` folder, in the `English` and `Portuguese` folders, which contains the DrawIO files for the System Architecture, as well as the exported images in `PNG` format, just like the one below:
 ![System Architecture](https://github.com/BrenoFariasdaSilva/TextSync/blob/main/assets/English/TextSync-EN.png)
+
+## `Service Interface:`
 
 ## `Project Dependencies:`
 - [NodeJS](https://nodejs.org/en/docs), which is a JavaScript runtime environment that executes JavaScript code outside a web browser, that we will use to create the server.
