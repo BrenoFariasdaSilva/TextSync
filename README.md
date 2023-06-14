@@ -26,7 +26,7 @@ The system is composed of three main components: the `server`, the `client` and 
 	```json
 	{
 		"id": "Document ID",
-		"datat": "Document Text"
+		"data": "Document Text"
 	}
 	```
 This was a quick overview of the system architecture, but if there is also a more detailed explanation of the system architecture in the `assets` folder, in the `English` and `Portuguese` folders, which contains the DrawIO files for the System Architecture, as well as the exported images in `PNG` format, just like the one below:
@@ -34,6 +34,35 @@ This was a quick overview of the system architecture, but if there is also a mor
 
 ## `Service Interface:`
 The service interface is composed of the following commands:
+- ***`load-document`***: This event is used to sent a request to the server to get the document from the database and return the document data to the client.  
+  - ***`Parameters`***:
+    - ***`id`***: The document ID.
+  - ***`Return`***:
+    - ***`data`***: The document data. 
+- ***`send-changes`***: This event is used to send a request to the server to update the document in the database, due to the fact that the user updated the document in the text editor UI and it's return is the broadcast of the changes to the other users that are in the same document session.
+  - ***`Parameters`***:
+    - ***`delta`***: The document changes made by the user. 
+  - ***`Return`***:
+    - ***`delta`***: The document changes that will be broadcasted to the other users, so that they can update their text editor UI.
+  
+
+- ***`receive-changes`***: This event is used to receive the changes froom the server that were made by the other user(s) that are in the same document session.
+  - ***`Parameters`***:
+    - ***`delta`***: The document changes made by the other user(s).
+  - ***`Return`***:
+    - ***`none`***;
+
+- ***``***: 
+  - ***`Parameters`***:
+    - ***``***:
+  - ***`Return`***:
+    - ***``***:
+
+- ***``***: 
+  - ***`Parameters`***:
+    - ***``***:
+  - ***`Return`***:
+    - ***``***:
 
 ## `Project Dependencies:`
 - [NodeJS](https://nodejs.org/en/docs), which is a JavaScript runtime environment that executes JavaScript code outside a web browser, that we will use to create the server.
