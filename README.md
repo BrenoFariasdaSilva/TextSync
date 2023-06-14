@@ -39,7 +39,6 @@ The service interface is composed of the following commands:
     - ***`id`***: The document ID.
   - ***`Return`***:
     - ***`load-document`***: The event that will be sent to the client, so that it can update the text editor UI with the document data. 
-  
 - ***`load-document`***: This event is a response of the server from a `get-document` request, which is used to update the text editor UI with the document data.
   - ***`Parameters`***:
     - ***`document`***: The document data.
@@ -65,11 +64,11 @@ The service interface is composed of the following commands:
   - ***`Return`***:
     - ***`none`***;
 
-- ***``***:  
+- ***`disconnect`***: This event is used to send a request to the server to remove the user from the document session, due to the fact that the user has closed the tab or the browser.
   - ***`Parameters`***:
-    - ***``***:
+    - ***`none`***;
   - ***`Return`***:
-    - ***``***:
+    - ***`none`***;
 
 ## `Project Dependencies:`
 - [NodeJS](https://nodejs.org/en/docs), which is a JavaScript runtime environment that executes JavaScript code outside a web browser, that we will use to create the server.
