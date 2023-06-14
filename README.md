@@ -3,10 +3,10 @@
 #### `Project Status: Under Development`
 
 #### `Project TO-DO List:`
-- TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge)
-- TODO: MongoDB replication, see [here](https://docs.mongodb.com/manual/replication/)
-- TODO: MongoDB Dockerfile, see [here](https://hub.docker.com/_/mongo)
-- TODO: Use [fly](https://fly.io/) to deploy the application, as an alternative to [Heroku](https://www.heroku.com/)
+- TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge).
+- TODO: MongoDB replication, see [here](https://docs.mongodb.com/manual/replication/).
+- TODO: MongoDB Dockerfile, see [here](https://hub.docker.com/_/mongo).
+- TODO: Use [fly](https://fly.io/) to deploy the application, as an alternative to [Heroku](https://www.heroku.com/).
 
 #### `Project New Fatures to implement:`
 - TODO: Add a `share` button to the application, so that each user can share their documents with other users.
