@@ -34,11 +34,18 @@ This was a quick overview of the system architecture, but if there is also a mor
 
 ## `Service Interface:`
 The service interface is composed of the following commands:
-- ***`load-document`***: This event is used to sent a request to the server to get the document from the database and return the document data to the client.  
+- ***`get-document`***: This event is used to sent a request to the server to get the document from the database and return the document data to the client.  
   - ***`Parameters`***:
     - ***`id`***: The document ID.
   - ***`Return`***:
-    - ***`data`***: The document data. 
+    - ***`load-document`***: The event that will be sent to the client, so that it can update the text editor UI with the document data. 
+  
+	- ***`load-document`***: This event is a response of the server from a `get-document` request, which is used to update the text editor UI with the document data.
+  - ***`Parameters`***:
+    - ***`document`***: The document data.
+  - ***`Return`***:
+    - ***`none`***;
+
 - ***`send-changes`***: This event is used to send a request to the server to update the document in the database, due to the fact that the user updated the document in the text editor UI and it's return is the broadcast of the changes to the other users that are in the same document session.
   - ***`Parameters`***:
     - ***`delta`***: The document changes made by the user. 
