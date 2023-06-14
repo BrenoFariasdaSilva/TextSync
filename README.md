@@ -33,6 +33,7 @@ This was a quick overview of the system architecture, but if there is also a mor
 ![System Architecture](https://github.com/BrenoFariasdaSilva/TextSync/blob/main/assets/English/TextSync-EN.png)
 
 ## `Service Interface:`
+The service interface is composed of the following commands:
 
 ## `Project Dependencies:`
 - [NodeJS](https://nodejs.org/en/docs), which is a JavaScript runtime environment that executes JavaScript code outside a web browser, that we will use to create the server.
