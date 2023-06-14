@@ -19,7 +19,7 @@ import { v4 as uuidV4 } from "uuid";
 function App() {
    // Render the 'TextEditor' component
    return (
-      <Router>
+      <Router> 
          <Routes>
             <Route path="/" element={<Navigate to={`/documents/${uuidV4()}`} />} />
             <Route path="/documents/:id" element={<TextEditor />} />
