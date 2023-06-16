@@ -63,6 +63,7 @@ The service interface is composed of the following commands:
 
 - ***`save-document`***: This event is used to send a request to the server to save the document in the database, due to the fact that thhe timer defined in the client (`const SAVE_INTERVAL_MS = 1000;`)has reached the end.
   - ***`Parameters`***:
+  - - ***`documentID`***: The document ID.
     - ***`data`***: The document data.
   - ***`Return`***:
     - ***`none`***;
