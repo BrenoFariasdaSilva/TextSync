@@ -66,7 +66,7 @@ export default function TextEditor() {
       if (socket == null || quill == null) return; // Return if the socket or Quill editor is not ready
 
       const interval = setInterval(() => { // Create an interval to save the document
-         socket.emit("save-document", quill.getContents()); // Send a 'save-document' event to the server passing the document content
+         socket.emit("save-document", documentId , quill.getContents()); // Send a 'save-document' event to the server passing the document content
       }, SAVE_INTERVAL_MS); // Create an interval to save the document
 
       return () => { // Return a cleanup function to clear the interval
