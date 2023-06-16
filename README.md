@@ -6,6 +6,7 @@
 - TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge).
 - TODO: Verify if every document UUID is unique.
 - TODO: Verify if the documents are being saved in the database.
+- TODO: Try to recover the document content by the document UUID in the broswer.
 - TODO: MongoDB replication, see [here](https://docs.mongodb.com/manual/replication/).
 - TODO: MongoDB Dockerfile, see [here](https://hub.docker.com/_/mongo).
 - TODO: Use [fly](https://fly.io/) to deploy the application, as an alternative to [Heroku](https://www.heroku.com/).
