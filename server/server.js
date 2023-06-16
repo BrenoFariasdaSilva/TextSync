@@ -59,9 +59,8 @@ io.on("connection", socket => { // Add a listener for the 'connection' event
    });
 
    // Add a listener for the 'save-document' event
-   socket.on("save-document", async data => {
-      console.log(`Saving document ${data._id}`);
-      await Document.findByIdAndUpdate(data._id, { data }); // Update the document data
+   socket.on("save-document", async (documentId, data) => {
+      await Document.findByIdAndUpdate(documentId, { data }); // Update the document data
    });
 
    // Add a listener for the 'disconnect' event
@@ -75,7 +74,7 @@ io.on("connection", socket => { // Add a listener for the 'connection' event
 const defaultValue = "";
 
 // Find or create a document by its id
-async function findOrCreateDocumentById(id) {
+async function findOrCreateDocumentById(id, data) {
    if (id == null) return; // Return if the id is null
 
    const document = await Document.findById(id); // Find the document by its id
