@@ -60,6 +60,7 @@ io.on("connection", socket => { // Add a listener for the 'connection' event
 
    // Add a listener for the 'save-document' event
    socket.on("save-document", async data => {
+      console.log(`Saving document ${data._id}`);
       await Document.findByIdAndUpdate(data._id, { data }); // Update the document data
    });
 
