@@ -13,7 +13,8 @@ const Document = require("./Document");
 mongoose.connect(process.env.DATABASE_URI, {
   useNewUrlParser: true, // Use the new URL parser
   useUnifiedTopology: true, // Use the new server discovery and monitoring engine
-}).then(() => console.log("MongoDB connected successfully")); // Log a success message if the connection is successful
+}).then(() => console.log("MongoDB connected successfully")) // Log a success message if the connection is successful
+.catch((err) => console.log(err)); // Log an error message if the connection is unsuccessful
 
 // Import the 'http' package
 const server = require("http").createServer();
