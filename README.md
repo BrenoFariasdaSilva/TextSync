@@ -98,7 +98,6 @@ In the client terminal, you will need to run the following command:
   ```
 In the case you get the connection denied in the database, if you are using the online database, you will need to add your IP address to the database whitelist.
 
-
 ## <span style="color:#297deb"> Client Directory Explained: </span>
 The client folder is located in `TextSync/client`.
 - ***`public`***: This folder contains the `index.html` file, which is the HTML file that is rendered by the browser, and the `favicon.ico` file, which is the icon that is displayed in the browser tab.
@@ -150,8 +149,6 @@ So, as we can see, WebSockets are a great choice for real-time communication bet
 
 - ***Why the use of MongoDB?*** The use of MongoDB is due to the fact that it is a NoSQL database, which means that it is a database that does not use the traditional row-column table database model, but rather a model that allows for more flexible and scalable data storage. Moreover, NoSQL databases are also great for this project because they are very scalable, which means that they can handle a large amount of data, which is also great for this project, since the document data can be very large. Making a connection of the MongoDB with the CAP theorem, we can see that MongoDB is a CP database, which means that it is a database that is consistent and partition tolerant. This means that MongoDB is a database that is consistent, which means that all clients see the same data at the same time, and partition tolerant, which means that the database continues to operate despite network partitions. So, as we can see, MongoDB is a great choice for this project.
 - ***So, how does MongoDB provice consistency and partition tolerance?*** MongoDB provides consistency and partition tolerance through the use of a replica set, which is a group of MongoDB servers that maintain the same data set, providing redundancy and increasing data availability. A replica set contains several data bearing nodes and optionally one arbiter node. The primary node receives all write operations, and is responsible for replicating all writes to the secondaries. Secondaries can optionally serve read operations, but that data is only eventually consistent by default. So, in case of a network partition, the primary node will continue to receive all write operations, and will replicate all writes to the secondaries, which will continue to serve read operations, but that data is only eventually consistent by default. So, as we can see, MongoDB provides consistency and partition tolerance through the use of a replica set.
-
-
 
 ## <span style="color:#297deb"> Useful Documentation: </span>
 - [Fly Steps Guide](https://fly.io/docs/hands-on/install-flyctl/)
