@@ -62,7 +62,7 @@ The service interface is composed of the following commands:
   - ***`Return`***:
     - ***`none`***;
 
-- **<span style="color:#64fccc"> disconnect</span>***: This event is used to send a request to the server to remove the user from the document session, due to the fact that the user has closed the tab or the browser.
+- ***<span style="color:#64fccc"> disconnect</span>***: This event is used to send a request to the server to remove the user from the document session, due to the fact that the user has closed the tab or the browser.
   - ***`Parameters`***:
     - ***`none`***;
   - ***`Return`***:
@@ -105,5 +105,20 @@ This command will simply open the `client` and `server` folders and run the `npm
 - [Fly Steps Guide](https://fly.io/docs/hands-on/install-flyctl/)
 
 ## <span style="color:#297deb"> Q&A: </span>
-- ***What is the purpose of the project?***: The purpose of the project is to create a collaborative text editor, that is, a text editor that can be used by multiple users at the same time, where each user can see the changes made by the other users in real time.
-- ***Ẁhy aren't the client handling the collisions from the generated UUIDs?***: The client isn't handling the collisions from the generated UUIDs because the probability of a collision is so low that it is not worth the effort to handle it. The probability of a collision is 1 in 2<sup>¹²²</sup>. For more information, see [this](https://en.wikipedia.org/wiki/Universally_unique_identifier#Random_UUID_probability_of_duplicates). 
+- ***What is the purpose of the project?*** The purpose of the project is to create a collaborative text editor, that is, a text editor that can be used by multiple users at the same time, where each user can see the changes made by the other users in real time.
+
+- ***Ẁhy aren't the client handling the collisions from the generated UUIDs?*** The client isn't handling the collisions from the generated UUIDs because the probability of a collision is so low that it is not worth the effort to handle it. The probability of a collision is 1 in 2<sup>¹²²</sup>. For more information, see [this](https://en.wikipedia.org/wiki/Universally_unique_identifier#Random_UUID_probability_of_duplicates). 
+
+- ***Why is the client sending the document data to the server every second?***: The client is sending the document data to the server every second because the server is saving the document data in the database every second, so that if the server crashes, the document data will not be lost.
+
+- ***Why the use of WebSockets?*** The use of WebSockets is due to the fact that they are a communication protocol that allows the client and the server to communicate in real time, that is, the client and the server can send messages to each other at any time, without the need for the client to send a request to the server and wait for the server to respond.
+
+## <span style="color:#297deb"> Client Directory Explained: </span>
+- ***`public`***: This folder contains the `index.html` file, which is the HTML file that is rendered by the browser, and the `favicon.ico` file, which is the icon that is displayed in the browser tab.
+- ***`src`***: This folder contains the `App.js`, `index.js`, `styles.css` and `TextEditor.js`.
+  - `App.js`: This file contains the `App` component, which is the main component of the application, which is responsible for rendering the `TextEditor` component.
+  - `index.js`: This file is responsible for rendering the `App` component in the `index.html` file.
+  - `styles.css`: This file contains the styles of the `index.html` file.
+  - `TextEditor.js`: This file contains the `TextEditor` component, which is the component responsible for rendering the text editor, which contains the `Quill` component, which is the component responsible for rendering the text editor itself, and the `Toolbar` component, which is the component responsible for rendering the toolbar of the text editor. Futhermore, this file is also responsible for sending event messages to the server, such as `load-document`, `save-document` and `disconnect`. Moreover, it is also responsible for receiving event messages from the server, such as `load-document` or `receive-changes`.
+- ***`node_modules`***: This folder contains all the dependencies of the project.
+- ***`.env`***: This file contains the environment variables of the application, such as the server address and the server port.
