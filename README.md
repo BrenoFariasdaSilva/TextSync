@@ -1,6 +1,6 @@
 # [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](https://github.com/BrenoFariasdaSilva/TextSync)
 
-### <span style="color:#297deb"> Project Status: Under Development</span>
+### <span style="color:#297deb"> Project Status: </span><span style="color:#64fccc">Under Development.</span>
 
 ### <span style="color:#297deb"> Project TO-DO List:</span>
 - TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge).
