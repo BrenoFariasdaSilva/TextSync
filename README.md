@@ -68,6 +68,26 @@ The service interface is composed of the following commands:
   - ***`Return`***:
     - ***`none`***;
 
+## <span style="color:#297deb"> How to run: </span>
+To run the project, you will need to have [NodeJS](https://nodejs.org/en/docs) installed on your machine, as well as [Nodemon](https://www.npmjs.com/package/nodemon) and [MongoDB](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/). After installing all the dependencies, you will need to run the following command in the terminal:
+```bash
+  make dependencies
+```
+Why this command? Because it will install all the dependencies of the project, which will open the client and server folders and install the dependencies of each one, which are defined in the `package.json` file. After installing all the dependencies, you will need to create the `.env` file in the `client` and `server` folders, which will contain the following variables:  
+The client `.env` file will contain the following variables:
+```bash
+  REACT_APP_SERVER_ADDRESS=http://localhost
+  REACT_APP_SERVER_PORT=3001
+```
+The server `.env` file will contain the following variables:  
+```bash
+  SERVER_ADDRESS=http://localhost
+  SERVER_PORT=3001
+  CLIENT_ADDRESS=http://localhost
+  CLIENT_PORT=3000
+  DATABASE_URI=insert your mongodb database uri here
+```
+
 ## <span style="color:#297deb"> Project Dependencies: </span>
 - [NodeJS](https://nodejs.org/en/docs), which is a JavaScript runtime environment that executes JavaScript code outside a web browser, that we will use to create the server.
 - [Nodemon](https://www.npmjs.com/package/nodemon), which is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
