@@ -4,6 +4,7 @@
 
 #### `Project TO-DO List:`
 - TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge).
+- TODO: Add names to the documents so you can open them in the url by using `/documents/documentName`.
 - TODO: MongoDB replication, see [here](https://docs.mongodb.com/manual/replication/).
 - TODO: Use [fly](https://fly.io/) to deploy the application, as an alternative to [Heroku](https://www.heroku.com/).
 
