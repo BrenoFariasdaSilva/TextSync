@@ -8,7 +8,7 @@
 - TODO: Use [fly](https://fly.io/) to deploy the application, as an alternative to [Heroku](https://www.heroku.com/).
 
 #### `Project New Fatures to implement:`
-- TODO: Add the option to name the documents, so that each user can have multiple documents.
+- TODO: Add the option to name the documents, so that each user can have multiple documents and use them without the need to be decorating it's UUIDs
 
 ## `Project Description:`
 This is a distributed text editor application, which means that you can edit a text file with your friends, in real time.
