@@ -1,4 +1,4 @@
-# Welcome to [`TextSync`](https://github.com/BrenoFariasdaSilva/TextSync) - A Real-Time Distributed-Text-Editor Application!
+# Welcome to [TextSync](https://github.com/BrenoFariasdaSilva/TextSync) - A Real-Time Distributed-Text-Editor Application!
 
 #### `Project Status: Under Development`
 
