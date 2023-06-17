@@ -128,9 +128,9 @@ The client folder is located in `TextSync/client`.
 
 ## <span style="color:#297deb"> Server Directory Explained: </span>
 The server folder is located in `TextSync/server`.
-- ***`server.js`***: This file contains the `server` function, which is the function responsible for creating the server, which is responsible for listening to the requests made by the client. This file is also responsible for connecting to the database, which is where the document data is stored. Moreover, this file is also responsible for sending event messages to the client, such as `load-document` or `receive-changes`. Furthermore, this file is also responsible for receiving event messages from the client, such as `save-document` or `disconnect`.
-- ***`Document.js`***: This file contains the `Document` model, which is the model responsible for defining the document schema, which is the schema that defines the structure of the document data.
+- ***`server.js`***: This file contains the `server` function, which is the function responsible for creating the server, which is responsible for listening to the requests made by the client, such as `save-document` or `disconnect`. This file is also responsible for connecting to the database, which is where the document data is stored. Moreover, this file is also responsible for sending event messages to the client, such as `load-document` or `receive-changes`.
+- ***`Document.js`***: This file contains the `Document` model, which is the model responsible for defining the document schema, which is the schema that defines the structure of the document data in the mongodb database.
 - `package.json`: This file contains all the dependencies of the project.
 - `package-lock.json`: This file contains the version of the dependencies of the project.
-- `.env`: This file contains the environment variables of the application, such as the server address and the server port.
+- `.env`: This file contains the environment variables of the application, such as the server address, server port and the database uri.
 - `node_modules`: This folder contains all the dependencies of the project.
