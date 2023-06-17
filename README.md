@@ -5,7 +5,6 @@
 #### `Project TO-DO List:`
 - TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge).
 - TODO: MongoDB replication, see [here](https://docs.mongodb.com/manual/replication/).
-- TODO: MongoDB Dockerfile, see [here](https://hub.docker.com/_/mongo).
 - TODO: Use [fly](https://fly.io/) to deploy the application, as an alternative to [Heroku](https://www.heroku.com/).
 
 #### `Project New Fatures to implement:`
@@ -83,3 +82,7 @@ make dependencies
 This command will simply open the `client` and `server` folders and run the `npm install` command, which will install all the dependencies of the project.
 ## Useful Documentation:
 - [Fly Steps Guide](https://fly.io/docs/hands-on/install-flyctl/)
+
+## `Q&A:`
+- ***`What is the purpose of the project?`***: The purpose of the project is to create a collaborative text editor, that is, a text editor that can be used by multiple users at the same time, where each user can see the changes made by the other users in real time.
+- ***Ẁhy aren't the client handling the collisions from the generated UUIDs?***: The client isn't handling the collisions from the generated UUIDs because the probability of a collision is so low that it is not worth the effort to handle it. The probability of a collision is 1 in 2^122. For more information, see [this](https://en.wikipedia.org/wiki/Universally_unique_identifier#Random_UUID_probability_of_duplicates). 
