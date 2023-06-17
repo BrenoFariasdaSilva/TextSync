@@ -96,6 +96,7 @@ In the client terminal, you will need to run the following command:
   ```bash
     make run_client
   ```
+In the case you get the connection denied in the database, if you are using the online database, you will need to add your IP address to the database whitelist.
 
 
 ## <span style="color:#297deb"> Client Directory Explained: </span>
