@@ -118,13 +118,8 @@ The server folder is located in `TextSync/server`.
 - [Quill](https://quilljs.com/docs/quickstart/), which is a powerful, free, open-source WYSIWYG editor built for the modern web.
 - [Socket.io](https://socket.io/docs/v4), which is a library for realtime web applications. It enables realtime, bi-directional communication between web clients and servers.
 - [dotenv](https://www.npmjs.com/package/dotenv), which is a zero-dependency module that loads environment variables from a `.env` file into `process.env`.
-This are just the most importante dependecies of this project, but the `package.json` file contains all the dependencies of the project, so you can install them by running the following command in the terminal:
-  ```bash
-  make dependencies
-  ```
-This command will simply open the `client` and `server` folders and run the `npm install` command, which will install all the dependencies of the project.
-## <span style="color:#297deb"> Useful Documentation: </span>
-- [Fly Steps Guide](https://fly.io/docs/hands-on/install-flyctl/)
+  
+This are just the most importante dependecies of this project, but the `package.json` file contains all the dependencies of the project.
 
 ## <span style="color:#297deb"> Q&A: </span>
 - ***What is the purpose of the project?*** The purpose of the project is to create a collaborative text editor, that is, a text editor that can be used by multiple users at the same time, where each user can see the changes made by the other users in real time.
@@ -134,3 +129,6 @@ This command will simply open the `client` and `server` folders and run the `npm
 - ***Why is the client sending the document data to the server every second?***: The client is sending the document data to the server every second because the server is saving the document data in the database every second, so that if the server crashes, the document data will not be lost.
 
 - ***Why the use of WebSockets?*** The use of WebSockets is due to the fact that they are a communication protocol that allows the client and the server to communicate in real time, that is, the client and the server can send messages to each other at any time, without the need for the client to send a request to the server and wait for the server to respond.
+
+## <span style="color:#297deb"> Useful Documentation: </span>
+- [Fly Steps Guide](https://fly.io/docs/hands-on/install-flyctl/)
