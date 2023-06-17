@@ -88,6 +88,28 @@ The server `.env` file will contain the following variables:
   DATABASE_URI=insert your mongodb database uri here
 ```
 
+## <span style="color:#297deb"> Client Directory Explained: </span>
+The client folder is located in `TextSync/client`.
+- ***`public`***: This folder contains the `index.html` file, which is the HTML file that is rendered by the browser, and the `favicon.ico` file, which is the icon that is displayed in the browser tab.
+- ***`src`***: This folder contains the `App.js`, `index.js`, `styles.css` and `TextEditor.js`.
+  - `App.js`: This file contains the `App` component, which is the main component of the application, which is responsible for rendering the `TextEditor` component.
+  - `index.js`: This file is responsible for rendering the `App` component in the `index.html` file.
+  - `styles.css`: This file contains the styles of the `index.html` file.
+  - `TextEditor.js`: This file contains the `TextEditor` component, which is the component responsible for rendering the text editor, which contains the `Quill` component, which is the component responsible for rendering the text editor itself, and the `Toolbar` component, which is the component responsible for rendering the toolbar of the text editor. Futhermore, this file is also responsible for sending event messages to the server, such as `load-document`, `save-document` and `disconnect`. Moreover, it is also responsible for receiving event messages from the server, such as `load-document` or `receive-changes`.
+  - `package.json`: This file contains all the dependencies of the project.
+  - `package-lock.json`: This file contains the version of the dependencies of the project.
+- ***`node_modules`***: This folder contains all the dependencies of the project.
+- ***`.env`***: This file contains the environment variables of the application, such as the server address and the server port.
+
+## <span style="color:#297deb"> Server Directory Explained: </span>
+The server folder is located in `TextSync/server`.
+- ***`server.js`***: This file contains the `server` function, which is the function responsible for creating the server, which is responsible for listening to the requests made by the client, such as `save-document` or `disconnect`. This file is also responsible for connecting to the database, which is where the document data is stored. Moreover, this file is also responsible for sending event messages to the client, such as `load-document` or `receive-changes`.
+- ***`Document.js`***: This file contains the `Document` model, which is the model responsible for defining the document schema, which is the schema that defines the structure of the document data in the mongodb database.
+- ***`package.json`***: This file contains all the dependencies of the project.
+- ***`package-lock.json`***: This file contains the version of the dependencies of the project.
+- ***`.env`***: This file contains the environment variables of the application, such as the server address, server port and the database uri.
+- ***`node_modules`***: This folder contains all the dependencies of the project.
+
 ## <span style="color:#297deb"> Project Dependencies: </span>
 - [NodeJS](https://nodejs.org/en/docs), which is a JavaScript runtime environment that executes JavaScript code outside a web browser, that we will use to create the server.
 - [Nodemon](https://www.npmjs.com/package/nodemon), which is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.
@@ -112,25 +134,3 @@ This command will simply open the `client` and `server` folders and run the `npm
 - ***Why is the client sending the document data to the server every second?***: The client is sending the document data to the server every second because the server is saving the document data in the database every second, so that if the server crashes, the document data will not be lost.
 
 - ***Why the use of WebSockets?*** The use of WebSockets is due to the fact that they are a communication protocol that allows the client and the server to communicate in real time, that is, the client and the server can send messages to each other at any time, without the need for the client to send a request to the server and wait for the server to respond.
-
-## <span style="color:#297deb"> Client Directory Explained: </span>
-The client folder is located in `TextSync/client`.
-- ***`public`***: This folder contains the `index.html` file, which is the HTML file that is rendered by the browser, and the `favicon.ico` file, which is the icon that is displayed in the browser tab.
-- ***`src`***: This folder contains the `App.js`, `index.js`, `styles.css` and `TextEditor.js`.
-  - `App.js`: This file contains the `App` component, which is the main component of the application, which is responsible for rendering the `TextEditor` component.
-  - `index.js`: This file is responsible for rendering the `App` component in the `index.html` file.
-  - `styles.css`: This file contains the styles of the `index.html` file.
-  - `TextEditor.js`: This file contains the `TextEditor` component, which is the component responsible for rendering the text editor, which contains the `Quill` component, which is the component responsible for rendering the text editor itself, and the `Toolbar` component, which is the component responsible for rendering the toolbar of the text editor. Futhermore, this file is also responsible for sending event messages to the server, such as `load-document`, `save-document` and `disconnect`. Moreover, it is also responsible for receiving event messages from the server, such as `load-document` or `receive-changes`.
-  - `package.json`: This file contains all the dependencies of the project.
-  - `package-lock.json`: This file contains the version of the dependencies of the project.
-- ***`node_modules`***: This folder contains all the dependencies of the project.
-- ***`.env`***: This file contains the environment variables of the application, such as the server address and the server port.
-
-## <span style="color:#297deb"> Server Directory Explained: </span>
-The server folder is located in `TextSync/server`.
-- ***`server.js`***: This file contains the `server` function, which is the function responsible for creating the server, which is responsible for listening to the requests made by the client, such as `save-document` or `disconnect`. This file is also responsible for connecting to the database, which is where the document data is stored. Moreover, this file is also responsible for sending event messages to the client, such as `load-document` or `receive-changes`.
-- ***`Document.js`***: This file contains the `Document` model, which is the model responsible for defining the document schema, which is the schema that defines the structure of the document data in the mongodb database.
-- ***`package.json`***: This file contains all the dependencies of the project.
-- ***`package-lock.json`***: This file contains the version of the dependencies of the project.
-- ***`.env`***: This file contains the environment variables of the application, such as the server address, server port and the database uri.
-- ***`node_modules`***: This folder contains all the dependencies of the project.
