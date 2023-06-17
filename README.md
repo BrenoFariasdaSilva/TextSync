@@ -73,19 +73,20 @@ To run the project, you will need to have [NodeJS](https://nodejs.org/en/docs) i
 ```bash
   make dependencies
 ```
-Why this command? Because it will install all the dependencies of the project, which will open the client and server folders and install the dependencies of each one, which are defined in the `package.json` file. After installing all the dependencies, you will need to create the `.env` file in the `client` and `server` folders, which will contain the following variables:  
+Why this command? Because it will install all the dependencies of the project, which will open the client and server folders and install the dependencies of each one, which are defined in the `package.json` file.  
+After installing all the dependencies, you will need to create the `.env` file in the `client` and `server` folders. There is a `.env.example` inside each directory and they have the following structure.  
 The client `.env` file will contain the following variables:
 ```bash
-  REACT_APP_SERVER_ADDRESS=http://localhost
-  REACT_APP_SERVER_PORT=3001
+  REACT_APP_SERVER_ADDRESS=ADDRESS HERE, SUCH AS http://localhost
+  REACT_APP_SERVER_PORT=IP HERE, SUCH AS 3001
 ```
 The server `.env` file will contain the following variables:  
 ```bash
-  SERVER_ADDRESS=http://localhost
-  SERVER_PORT=3001
-  CLIENT_ADDRESS=http://localhost
-  CLIENT_PORT=3000
-  DATABASE_URI=insert your mongodb database uri here
+  SERVER_ADDRESS=ADDRESS HERE, SUCH AS http://localhost
+  SERVER_PORT=IP HERE, SUCH AS 3001
+  CLIENT_ADDRESS=ADDRESS HERE, SUCH AS http://localhost
+  CLIENT_PORT=IP HERE, SUCH AS 3000
+  DATABASE_URI=mongodb+srv://USERNAME_HERE:PASSWORD_HERE@CLUSTER_HERE
 ```
 After creating the `.env` file, you will need to create two terminals, one for the client and one for the server.   
 In the server terminal, you will need to run the following command:
