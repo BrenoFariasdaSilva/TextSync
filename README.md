@@ -87,6 +87,16 @@ The server `.env` file will contain the following variables:
   CLIENT_PORT=3000
   DATABASE_URI=insert your mongodb database uri here
 ```
+After creating the `.env` file, you will need to create two terminals, one for the client and one for the server.   
+In the server terminal, you will need to run the following command:
+  ```bash
+    make run_server
+  ```
+In the client terminal, you will need to run the following command:
+  ```bash
+    make run_client
+  ```
+
 
 ## <span style="color:#297deb"> Client Directory Explained: </span>
 The client folder is located in `TextSync/client`.
