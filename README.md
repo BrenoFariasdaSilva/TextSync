@@ -139,7 +139,19 @@ This are just the most importante dependecies of this project, but the `package.
 
 - ***Why is the client sending the document data to the server every second?***: The client is sending the document data to the server every second because the server is saving the document data in the database every second, so that if the server crashes, the document data will not be lost.
 
-- ***Why the use of WebSockets?*** The use of WebSockets is due to the fact that they are a communication protocol that allows the client and the server to communicate in real time, that is, the client and the server can send messages to each other at any time, without the need for the client to send a request to the server and wait for the server to respond.
+- ***Why the use of WebSockets?*** The use of WebSockets is due to the fact that they are a communication protocol that allows the client and the server to communicate in real time, that is, the client and the server can send messages to each other at any time, without the need for the client to send a request to the server and wait for the server to respond. So, unlike traditional HTTP connections that follow a request-response model, WebSockets allow for continuous data transmission in both directions. Here is a quick overview of the WebSocket protocol:
+  - Handshake: The client sends an HTTP request to the server, requesting an upgrade to the WebSocket protocol. This request includes specific headers indicating the intention to establish a WebSocket connection.
+  - Handshake response: If the server supports WebSockets, it responds with an HTTP 101 status code (Switching Protocols) and upgrades the connection to the WebSocket protocol.
+  - WebSocket connection: Once the connection is upgraded, the WebSocket connection is established, and both the client and server can start sending data to each other.
+  - Data exchange: The WebSocket connection remains open, allowing data to be sent back and forth between the client and server. Either side can initiate communication at any time, without the need for a new HTTP request. This bidirectional communication enables real-time data transfer.
+  - Connection termination: The WebSocket connection remains open until either the client or server explicitly closes it or if a network issue occurs.  
+  
+So, as we can see, WebSockets are a great choice for real-time communication between the client and the server, just what we need for this project.
+
+- ***Why the use of MongoDB?*** The use of MongoDB is due to the fact that it is a NoSQL database, which means that it is a database that does not use the traditional row-column table database model, but rather a model that allows for more flexible and scalable data storage. Moreover, NoSQL databases are also great for this project because they are very scalable, which means that they can handle a large amount of data, which is also great for this project, since the document data can be very large. Making a connection of the MongoDB with the CAP theorem, we can see that MongoDB is a CP database, which means that it is a database that is consistent and partition tolerant. This means that MongoDB is a database that is consistent, which means that all clients see the same data at the same time, and partition tolerant, which means that the database continues to operate despite network partitions. So, as we can see, MongoDB is a great choice for this project.
+
+
+
 
 ## <span style="color:#297deb"> Useful Documentation: </span>
 - [Fly Steps Guide](https://fly.io/docs/hands-on/install-flyctl/)
