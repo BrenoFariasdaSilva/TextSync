@@ -15,5 +15,8 @@
     "mongoose": "^7.2.4",
     "nodemon": "^2.0.22",
     "socket.io": "^4.6.2"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.2.15"
   }
 }
