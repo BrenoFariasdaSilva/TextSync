@@ -18,8 +18,8 @@ mongoose.connect(process.env.DATABASE_URI, {
 
 // Import the 'http' package
 const server = require("http").createServer();
-server.listen(process.env.SERVER_PORT, () => { // Listen on the specified port
-   console.log(`Server listening on port ${process.env.SERVER_PORT}`); // Log a success message if the server is listening
+server.listen(process.env.PORT, () => { // Listen on the specified port
+   console.log(`Server listening on port ${process.env.PORT}`); // Log a success message if the server is listening
 });
 
 // Import the 'socket.io' package
@@ -27,9 +27,7 @@ const io = require("socket.io")(server, {
    // Configure Cross-Origin Resource Sharing (CORS)
    cors: {
       // Define the allowed origin for cross-origin requests
-      origin: `${process.env.CLIENT_ADDRESS}:${process.env.CLIENT_PORT}`,
-      // Specify the allowed HTTP methods for cross-origin requests
-      methods: ["GET", "POST"], 
+      origin: `${process.env.CLIENT_ADDRESS}`,
    },
 });
 
