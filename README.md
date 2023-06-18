@@ -27,7 +27,7 @@ The system is composed of three main components: the `server`, the `client` and 
 		"data": "Document Text"
 	}
 	```
-This was a quick overview of the system architecture, but there is also a more detailed explanation of the system architecture in the `assets` folder, in the `English` and `Portuguese` folders, which contains the DrawIO files for the System Architecture, as well as the exported images in `PNG` format, just like the one below:
+This was a quick overview of the system architecture, but there is also a more detailed explanation of the system architecture in the [assets folder](https://github.com/BrenoFariasdaSilva/TextSync/tree/main/assets), in the `English` and `Portuguese` folders, which contains the DrawIO files for the System Architecture, as well as the exported images in `PNG` format, just like the one below:
 ![System Architecture](https://github.com/BrenoFariasdaSilva/TextSync/blob/main/assets/English/TextSync-EN.png)
 
 ## <span style="color:#297deb"> Service Interface: </span>
