@@ -23,8 +23,8 @@ mongoose.connect(process.env.DATABASE_URI, {
 
 // Import the 'http' package
 const server = require("http").createServer();
-server.listen(process.env.PORT, allowedAddress, maxConnections, () => { // Listen on the specified port
-   console.log(`Server listening on port ${process.env.PORT}`); // Log a success message if the server is listening
+server.listen(process.env.SERVER_PORT, allowedAddress, maxConnections, () => { // Listen on the specified port
+   console.log(`Server listening on port ${process.env.SERVER_PORT}`); // Log a success message if the server is listening
 });
 
 // Import the 'socket.io' package
