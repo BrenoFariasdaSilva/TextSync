@@ -1,7 +1,6 @@
 # [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](https://github.com/BrenoFariasdaSilva/TextSync)
-This project is being deployed in [Fly.io](https://fly.io/) and can be accessed [here]  
-[Client](https://textsync.fly.dev/).  
-[Server](https://textsyncserver.fly.dev/).  
+This project is being deployed in [Fly.io](https://fly.io/) and can be accessed [here](https://textsync.fly.dev/)  
+
 ### <span style="color:#297deb"> Project Status: </span><span style="color:#64fccc">Under Development.</span>
 
 ### <span style="color:#297deb"> Project TO-DO List:</span>
