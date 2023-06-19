@@ -9,6 +9,11 @@ const mongoose = require("mongoose");
 // Import the 'Document' model
 const Document = require("./Document");
 
+// Define the allowed address for incoming connections
+const allowedAddress = "0.0.0.0";
+// Define the maximum number of connections
+const maxConnections = 100;
+
 // Connect to the MongoDB database
 mongoose.connect(process.env.DATABASE_URI, {
   useNewUrlParser: true, // Use the new URL parser
@@ -18,7 +23,7 @@ mongoose.connect(process.env.DATABASE_URI, {
 
 // Import the 'http' package
 const server = require("http").createServer();
-server.listen(process.env.PORT, () => { // Listen on the specified port
+server.listen(process.env.PORT, allowedAddress, maxConnections, () => { // Listen on the specified port
    console.log(`Server listening on port ${process.env.PORT}`); // Log a success message if the server is listening
 });
 
@@ -28,6 +33,8 @@ const io = require("socket.io")(server, {
    cors: {
       // Define the allowed origin for cross-origin requests
       origin: `${process.env.CLIENT_ADDRESS}`,
+      // Define the allowed HTTP methods for cross-origin requests
+      methods: ["GET", "POST"],
    },
 });
 
