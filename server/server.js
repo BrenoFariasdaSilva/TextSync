@@ -28,6 +28,8 @@ const io = require("socket.io")(server, {
    cors: {
       // Define the allowed origin for cross-origin requests
       origin: `${process.env.CLIENT_ADDRESS}`,
+      // Define the allowed methods for cross-origin requests
+      methods: ["GET", "POST"],
    },
 });
 
