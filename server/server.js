@@ -32,7 +32,7 @@ const io = require("socket.io")(server, {
    // Configure Cross-Origin Resource Sharing (CORS)
    cors: {
       // Define the allowed origin for cross-origin requests from any client at port 3000
-      origin: `${process.env.CLIENT_ADDRESS}:${process.env.CLIENT_PORT}`,
+      origin: "*",
       // Define the allowed HTTP methods for cross-origin requests
       methods: ["GET", "POST"],
    },
