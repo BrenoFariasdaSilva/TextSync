@@ -11,6 +11,9 @@ const mongoose = require("mongoose");
 // Import the 'Document' model
 const Document = require("./Document");
 
+// Define the default value for a new document data
+const emptyDocument = "";
+
 // Connect to the MongoDB database
 // The 'DATABASE_URI' environment variable is defined in the .env file
 // It returns a promise that resolves to the database connection object
@@ -82,9 +85,6 @@ io.on("connection", socket => { // Add a listener for the 'connection' event
    });
 });
 
-// Define the default value for the document data
-const defaultValue = "";
-
 // Find or create a document by its id
 // It receives a document ID and data as parameters
 // It returns a promise that resolves to return the document if it exists, or create a new document if it does not exist
@@ -94,5 +94,5 @@ async function findOrCreateDocumentById(id, data) {
    const document = await Document.findById(id); // Find the document by its id
    if (document) return document; // Return the document if it exists
 
-   return await Document.create({ _id: id, data: defaultValue }); // Create a new document if it does not exist
+   return await Document.create({ _id: id, data: emptyDocument }); // Create a new document if it does not exist
 }
