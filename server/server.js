@@ -41,8 +41,11 @@ const io = require("socket.io")(server, {
 const documentSockets = {};
 
 // io.on is a listener for incoming connections
+// It receives a socket object as a parameter
 io.on("connection", socket => { // Add a listener for the 'connection' event
-   // Add a listener for the 'get-document' event
+   // Add a listener for the 'get-document' event, which is emitted by the client
+   // It receives a document ID as a parameter
+   // Then, it emits the 'load-document' event to the client
    socket.on("get-document", async documentId => {
       const document = await findOrCreateDocumentById(documentId); // Find or create a document by its id
       socket.join(documentId); // Join the document room
@@ -53,6 +56,8 @@ io.on("connection", socket => { // Add a listener for the 'connection' event
    });
 
    // Add a listener for the 'send-changes' event
+   // It receives a delta as a parameter, which is the changes made to the document by the client
+   // Then, it emits the 'receive-changes' event to all clients in the same document room
    socket.on("send-changes", delta => { 
       // Get the document ID associated with the socket
       const documentId = documentSockets[socket.id];
@@ -63,11 +68,14 @@ io.on("connection", socket => { // Add a listener for the 'connection' event
    });
 
    // Add a listener for the 'save-document' event
+   // It receives a document ID and data as parameters
+   // Then, it updates the document data in the database
    socket.on("save-document", async (documentId, data) => {
       await Document.findByIdAndUpdate(documentId, { data }); // Update the document data
    });
 
    // Add a listener for the 'disconnect' event
+   // It removes the document ID association when the socket disconnects
    socket.on("disconnect", () => {
       // Remove the document ID association when the socket disconnects
       delete documentSockets[socket.id];
@@ -78,6 +86,8 @@ io.on("connection", socket => { // Add a listener for the 'connection' event
 const defaultValue = "";
 
 // Find or create a document by its id
+// It receives a document ID and data as parameters
+// It returns a promise that resolves to return the document if it exists, or create a new document if it does not exist
 async function findOrCreateDocumentById(id, data) {
    if (id == null) return; // Return if the id is null
 
