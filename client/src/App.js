@@ -1,3 +1,6 @@
+// This file defines the 'App' component which is the root component of the application.
+// The 'App' component renders the 'TextEditor' component which is the main component of the application.
+
 // Import the necessary module from the 'react' package
 import React from "react";
 
