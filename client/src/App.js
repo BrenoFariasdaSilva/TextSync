@@ -7,9 +7,9 @@ import TextEditor from "./TextEditor";
 // Import the necessary modules from the 'react-router-dom' package
 import {
    BrowserRouter as Router,
-   Routes,
-   Route,
-   Navigate,
+   Routes, // 'Routes' is a container for 'Route' components 
+   Route, // 'Route' is a component that defines a route
+   Navigate, // 'Navigate' is a component that redirects to a route
 } from "react-router-dom";
 
 // Import the 'uuid' package
