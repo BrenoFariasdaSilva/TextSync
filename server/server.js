@@ -12,6 +12,8 @@ const envFilePath = path.join(__dirname, ".env");
 if (!fs.existsSync(envFilePath)) { // Check if the .env file does not exist
   console.error("Error: .env file not found.");
   process.exit(1); // Exit the process with an error code
+} else { // The .env file exists
+   console.log(".env file found.");
 }
 
 // This loads the .env file from the root directory of the server.
@@ -40,8 +42,8 @@ mongoose.connect(process.env.DATABASE_URI, {
 
 // Import the 'http' package
 const server = require("http").createServer();
-server.listen(process.env.PORT, () => { // Listen on the specified port
-   console.log(`Server listening on port ${process.env.PORT}`); // Log a success message if the server is listening
+server.listen(process.env.SERVER_PORT, () => { // Listen on the specified port
+   console.log(`Server listening on port ${process.env.SERVER_PORT}`); // Log a success message if the server is listening
 });
 
 // Import the 'socket.io' package
