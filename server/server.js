@@ -1,4 +1,6 @@
-// Desc: Server for the TextSync - A Realtime Distributed Text Editor.
+// This file is the server-side code for the application. 
+// It is responsible for creating the websocket connection and handling the events, like 'get-document' and 'send-changes'.
+// It is also responsible for creating the connection object to the MongoDB database, as well as the Document model for the database operations.
 
 // This loads the .env file from the root directory of the server.
 require("dotenv").config({ path: "./.env" });
@@ -53,7 +55,7 @@ io.on("connection", socket => { // Add a listener for the 'connection' event
       // Get the document ID associated with the socket
       const documentId = documentSockets[socket.id];
       if (documentId) { // Check if the document ID is valid
-      // Broadcast the changes only to clients in the same document room
+      // Broadcast the changes only to clients in the same document room according to the document ID (UUID)
       socket.to(documentId).emit("receive-changes", delta);
       }
    });
