@@ -1,4 +1,5 @@
 // This file defines the 'App' component which is the root component of the application.
+// This file is called by the 'index.js' file.
 // The 'App' component renders the 'TextEditor' component which is the main component of the application.
 
 // Import the necessary module from the 'react' package
