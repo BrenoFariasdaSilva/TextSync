@@ -25,8 +25,8 @@ function App() {
    return (
       <Router> 
          <Routes>
-            <Route path="/" element={<Navigate to={`/documents/${uuidV4()}`} />} />
-            <Route path="/documents/:id" element={<TextEditor />} />
+            <Route path="/" element={<Navigate to={`/documents/${uuidV4()}`} />} /> {/* Redirect to a random generated document ID */}
+            <Route path="/documents/:id" element={<TextEditor />} /> {/* Render the 'TextEditor' component */}
          </Routes>
       </Router>
    );
