@@ -1,4 +1,5 @@
-// Desc: Document model for MongoDB
+// This file creates the 'Document' model for the MongoDB database.
+
 const { Schema, model } = require("mongoose");
 
 // Define the schema for the Document model
