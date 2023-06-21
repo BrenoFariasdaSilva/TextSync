@@ -39,6 +39,7 @@ const TOOLBAR_OPTIONS = [
 ]; // Define the toolbar options for the Quill editor
 
 // Define the 'TextEditor' component
+// @brief: This component renders the Quill editor and handles the socket events, like 'save-document' and 'load-document'.
 export default function TextEditor() {
    const { id: documentId } = useParams(); // Get the document ID from the URL
    const [socket, setSocket] = useState(); // Create a state variable to store the socket
