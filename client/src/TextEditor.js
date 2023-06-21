@@ -1,3 +1,7 @@
+// This file defines the 'TextEditor' component which is the main component of the application.
+// This file is called by the 'App.js' file.
+// The 'TextEditor' component renders the Quill editor and handles the socket events, like 'save-document' and 'load-document'.
+
 // Import the necessary modules from the 'react' package
 import React from "react";
 import { useCallback, useEffect, useState } from "react";
