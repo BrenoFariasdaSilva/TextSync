@@ -1,3 +1,5 @@
+/* Styles for the container */
+
 /* Apply box-sizing: border-box to all elements and pseudo-elements */
 *, *::before, *::after {
    box-sizing: border-box;
