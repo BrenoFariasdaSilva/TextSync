@@ -14,6 +14,9 @@ const Document = require("./Document");
 // Define the default value for a new document data
 const emptyDocument = "";
 
+// Store the active document sockets by their IDs
+const documentSockets = {};
+
 // Connect to the MongoDB database
 // The 'DATABASE_URI' environment variable is defined in the .env file
 // It returns a promise that resolves to the database connection object
@@ -39,9 +42,6 @@ const io = require("socket.io")(server, {
       methods: ["GET", "POST"],
    },
 });
-
-// Store the active document sockets
-const documentSockets = {};
 
 // io.on is a listener for incoming connections
 // It receives a socket object as a parameter
