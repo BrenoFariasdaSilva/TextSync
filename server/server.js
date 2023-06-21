@@ -12,6 +12,8 @@ const mongoose = require("mongoose");
 const Document = require("./Document");
 
 // Connect to the MongoDB database
+// The 'DATABASE_URI' environment variable is defined in the .env file
+// It returns a promise that resolves to the database connection object
 mongoose.connect(process.env.DATABASE_URI, {
   useNewUrlParser: true, // Use the new URL parser
   useUnifiedTopology: true, // Use the new server discovery and monitoring engine
