@@ -2,6 +2,18 @@
 // It is responsible for creating the websocket connection and handling the events, like 'get-document' and 'send-changes'.
 // It is also responsible for creating the connection object to the MongoDB database, as well as the Document model for the database operations.
 
+// Import the 'fs' package
+const fs = require("fs"); 
+// Import the 'path' package
+const path = require("path"); 
+
+// Check if .env file exists
+const envFilePath = path.join(__dirname, ".env");
+if (!fs.existsSync(envFilePath)) { // Check if the .env file does not exist
+  console.error("Error: .env file not found.");
+  process.exit(1); // Exit the process with an error code
+}
+
 // This loads the .env file from the root directory of the server.
 require("dotenv").config({ path: "./.env" });
 
