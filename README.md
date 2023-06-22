@@ -31,7 +31,7 @@ This was a quick overview of the system architecture, but there is also a more d
 The service interface is composed of the following commands:
 - ***<span style="color:#64fccc"> get-document </span>***: This event is used to sent a request to the server to get the document from the database and return the document data to the client.  
   - ***`Parameters`***:
-    - ***`id`***: The document ID.
+    - ***`documentId`***: The document ID.
   - ***`Return`***:
     - ***`load-document`***: The event that will be sent to the client, so that it can update the text editor UI with the document data. 
   
