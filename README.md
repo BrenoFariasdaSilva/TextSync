@@ -5,8 +5,6 @@ This project is being deployed in [Fly.io](https://fly.io/) and can be accessed 
 
 ### <span style="color:#297deb"> Project TO-DO List:</span>
 - TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge).
-- TODO: MongoDB replication, see [here](https://docs.mongodb.com/manual/replication/).
-- TODO: Use [fly](https://fly.io/) to deploy the application, as an alternative to [Heroku](https://www.heroku.com/).
 
 ### <span style="color:#297deb"> Project New Fatures to implement:</span>
 - TODO: Add the option to name the documents, so that each user can have multiple documents and use them without the need to be decorating it's UUIDs.
