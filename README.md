@@ -20,7 +20,7 @@ The system is composed of three main components: the `server`, the `client` and 
 - ***<span style="color:#297deb"> Database </span>***: Lastly, the database used is a [MongoDB](https://www.mongodb.com/docs/manual/tutorial/getting-started/), that is a `NoSQL` database who is responsible for storing the text document which will be in the format of a [JSON](https://json-schema.org/learn/getting-started-step-by-step.html), as follows: 
 	```json
 	{
-		"id": "Document ID",
+		"_id": "Document ID",
 		"data": "Document Text"
 	}
 	```
