@@ -8,7 +8,7 @@
   
 ---
 
-This project is being deployed in [Fly.io](https://fly.io/) and can be accessed [here](https://textsync.fly.dev/)  
+This project is being deployed in [Fly.io](https://fly.io/) and can be accessed [here](https://textsync.fly.dev/).  
   
 ---
 
