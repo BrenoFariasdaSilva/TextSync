@@ -3,7 +3,16 @@
  # [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](https://github.com/BrenoFariasdaSilva/TextSync)
 
 </div>
+
+<div align="center">
+  
+---
+
 This project is being deployed in [Fly.io](https://fly.io/) and can be accessed [here](https://textsync.fly.dev/)  
+  
+---
+
+</div>
 
 ## Table of Contents
 - [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](#welcome-to-textsync---a-real-time-distributed-text-editor-application)
