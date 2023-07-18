@@ -13,6 +13,23 @@ This project is being deployed in [Fly.io](https://fly.io/) and can be accessed 
 This is a distributed text editor application, which means that you can edit a text file with your friends, in real time.
 The purpose of this project is to learn about distributed systems and the challenges of building them, such as `concurrency`, `consistency`, `availability`, `partition tolerance`, etc.
 
+## Table of Contents
+- [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](#welcome-to-textsync---a-real-time-distributed-text-editor-application)
+    - [ Project Status: Completed.](#-project-status-completed)
+    - [ Project TO-DO List:](#-project-to-do-list)
+    - [ Project New Fatures to implement:](#-project-new-fatures-to-implement)
+  - [ Project Description: ](#-project-description-)
+  - [Table of Contents](#table-of-contents)
+  - [ System Architecture: ](#-system-architecture-)
+  - [ Service Interface: ](#-service-interface-)
+  - [ How to run: ](#-how-to-run-)
+  - [ Client Directory Explained: ](#-client-directory-explained-)
+  - [ Server Directory Explained: ](#-server-directory-explained-)
+  - [ Project Dependencies: ](#-project-dependencies-)
+  - [ Q\&A: ](#-qa-)
+  - [ Useful Documentation: ](#-useful-documentation-)
+
+
 ## <span style="color:#297deb"> System Architecture: </span>
 The system is composed of three main components: the `server`, the `client` and the `database`.  
 - ***<span style="color:#297deb"> Client </span>***: The client is created using [React](https://react.dev/) that is responsible for sending the requests to the server and receiving the responses from it. The client contains a web interface for the document visualization.  As for the UI, it uses [Quill](https://github.com/zenoamaro/react-quill), which is a React component wrapping [Quill](https://quilljs.com/), a powerful and extensible rich text editor. The request that the client sends is defined in the section named `Service Interface`. The communication between the client and the server is made using [Socket.IO](https://socket.io/docs/v4/index.html), which is a library that enables real-time, bidirectional and event-based communication between the browser and the server.
