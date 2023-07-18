@@ -18,6 +18,12 @@ This project is being deployed in [Fly.io](https://fly.io/) and can be accessed 
   <img src="https://wakatime.com/badge/github/BrenoFariasdaSilva/TextSync.svg" alt="wakatime" />
 </p>
 
+<div align="center">
+  
+![RepoBeats Statistics](https://repobeats.axiom.co/api/embed/b71df9a5a21e8f4356d06071a8e86504c25e3c1c.svg "Repobeats analytics image")
+
+</div>
+
 ## Table of Contents
 - [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](#welcome-to-textsync---a-real-time-distributed-text-editor-application)
     - [ Project Status: Completed.](#-project-status-completed)
