@@ -1,18 +1,6 @@
 # [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](https://github.com/BrenoFariasdaSilva/TextSync)
 This project is being deployed in [Fly.io](https://fly.io/) and can be accessed [here](https://textsync.fly.dev/)  
 
-### <span style="color:#297deb"> Project Status: </span><span style="color:#64fccc">Completed.</span>
-
-### <span style="color:#297deb"> Project TO-DO List:</span>
-- TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge).
-
-### <span style="color:#297deb"> Project New Fatures to implement:</span>
-- TODO: Add the option to name the documents, so that each user can have multiple documents and use them without the need to be decorating it's UUIDs.
-
-## <span style="color:#297deb"> Project Description: </span>
-This is a distributed text editor application, which means that you can edit a text file with your friends, in real time.
-The purpose of this project is to learn about distributed systems and the challenges of building them, such as `concurrency`, `consistency`, `availability`, `partition tolerance`, etc.
-
 ## Table of Contents
 - [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](#welcome-to-textsync---a-real-time-distributed-text-editor-application)
     - [ Project Status: Completed.](#-project-status-completed)
@@ -29,6 +17,17 @@ The purpose of this project is to learn about distributed systems and the challe
   - [ Q\&A: ](#-qa-)
   - [ Useful Documentation: ](#-useful-documentation-)
 
+### <span style="color:#297deb"> Project Status: </span><span style="color:#64fccc">Completed.</span>
+
+### <span style="color:#297deb"> Project TO-DO List:</span>
+- TODO: Add a project build status badge, see [here](https://docs.github.com/en/actions/managing-workflow-runs/adding-a-workflow-status-badge).
+
+### <span style="color:#297deb"> Project New Fatures to implement:</span>
+- TODO: Add the option to name the documents, so that each user can have multiple documents and use them without the need to be decorating it's UUIDs.
+
+## <span style="color:#297deb"> Project Description: </span>
+This is a distributed text editor application, which means that you can edit a text file with your friends, in real time.
+The purpose of this project is to learn about distributed systems and the challenges of building them, such as `concurrency`, `consistency`, `availability`, `partition tolerance`, etc.
 
 ## <span style="color:#297deb"> System Architecture: </span>
 The system is composed of three main components: the `server`, the `client` and the `database`.  
