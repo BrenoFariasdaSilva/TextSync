@@ -14,9 +14,14 @@ This project is being deployed in [Fly.io](https://fly.io/) and can be accessed 
 
 </div>
 
-<p align="center">
-  <img src="https://wakatime.com/badge/github/BrenoFariasdaSilva/TextSync.svg" alt="wakatime" />
-</p>
+<div align="center">
+
+![GitHub Code Size in Bytes](https://img.shields.io/github/languages/code-size/BrenoFariasdaSilva/TextSync)
+![GitHub Last Commit](https://img.shields.io/github/last-commit/BrenoFariasdaSilva/TextSync)
+![GitHub](https://img.shields.io/github/license/BrenoFariasdaSilva/TextSync)
+![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/TextSync.svg)
+
+</div>
 
 <div align="center">
   
