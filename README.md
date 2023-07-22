@@ -1,6 +1,6 @@
 <div align="center">
   
- # [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](https://github.com/BrenoFariasdaSilva/TextSync) <img src="https://github.com/BrenoFariasdaSilva/TextSync/blob/main/assets/icon/TextSync.svg"  width="3%" height="3%">
+ # [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](https://github.com/BrenoFariasdaSilva/TextSync) <img src="https://github.com/BrenoFariasdaSilva/TextSync/blob/main/.assets/TextSync.svg"  width="3%" height="3%">
 
 </div>
 
