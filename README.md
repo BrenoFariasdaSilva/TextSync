@@ -30,12 +30,12 @@ This project is being deployed in [Fly.io](https://fly.io/) and can be accessed 
 </div>
 
 ## Table of Contents
-- [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application!](#welcome-to-textsync---a-real-time-distributed-text-editor-application)
+- [Welcome to TextSync - A Real-Time Distributed-Text-Editor Application! ](#welcome-to-textsync---a-real-time-distributed-text-editor-application-)
+  - [Table of Contents](#table-of-contents)
     - [ Project Status: Completed.](#-project-status-completed)
     - [ Project TO-DO List:](#-project-to-do-list)
     - [ Project New Fatures to implement:](#-project-new-fatures-to-implement)
   - [ Project Description: ](#-project-description-)
-  - [Table of Contents](#table-of-contents)
   - [ System Architecture: ](#-system-architecture-)
   - [ Service Interface: ](#-service-interface-)
   - [ How to run: ](#-how-to-run-)
@@ -44,6 +44,7 @@ This project is being deployed in [Fly.io](https://fly.io/) and can be accessed 
   - [ Project Dependencies: ](#-project-dependencies-)
   - [ Q\&A: ](#-qa-)
   - [ Useful Documentation: ](#-useful-documentation-)
+  - [License](#license)
 
 ### <span style="color:#297deb"> Project Status: </span><span style="color:#64fccc">Completed.</span>
 
@@ -198,3 +199,6 @@ So, as we can see, WebSockets are a great choice for real-time communication bet
 
 ## <span style="color:#297deb"> Useful Documentation: </span>
 - [Fly Steps Guide](https://fly.io/docs/hands-on/install-flyctl/)
+
+## License
+This project is licensed under the [Creative Commons Zero v1.0 Universal](LICENSE), which means you are free to use, modify, and distribute the code. See the [LICENSE](LICENSE) file for more details.
