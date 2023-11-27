@@ -201,4 +201,4 @@ So, as we can see, WebSockets are a great choice for real-time communication bet
 - [Fly Steps Guide](https://fly.io/docs/hands-on/install-flyctl/)
 
 ## License
-This project is licensed under the [Creative Commons Zero v1.0 Universal](LICENSE), which means you are free to use, modify, and distribute the code. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the [Creative Commons Zero v1.0 Universal](LICENSE), which allows you to use, modify, distribute, and sublicense this code, even for commercial purposes, as long as you include the original copyright notice and attribute you as the original author for the repository. See the [LICENSE](LICENSE) file for more details.
