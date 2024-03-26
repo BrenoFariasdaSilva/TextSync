@@ -44,6 +44,7 @@ This project is being deployed in [Fly.io](https://fly.io/) and can be accessed 
   - [ Project Dependencies: ](#-project-dependencies-)
   - [ Q\&A: ](#-qa-)
   - [ Useful Documentation: ](#-useful-documentation-)
+  - [Contributing](#contributing)
   - [License](#license)
 
 ### <span style="color:#297deb"> Project Status: </span><span style="color:#64fccc">Completed.</span>
@@ -199,6 +200,33 @@ So, as we can see, WebSockets are a great choice for real-time communication bet
 
 ## <span style="color:#297deb"> Useful Documentation: </span>
 - [Fly Steps Guide](https://fly.io/docs/hands-on/install-flyctl/)
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**. If you have suggestions for improving the code, your insights will be highly welcome.
+In order to contribute to this project, please follow the guidelines below or read the [CONTRIBUTING.md](CONTRIBUTING.md) file for more details on how to contribute to this project, as it contains information about the commit standards and the entire pull request process.
+Please follow these guidelines to make your contributions smooth and effective:
+
+1. **Set Up Your Environment**: Ensure you've followed the setup instructions in the [Setup](#setup) section to prepare your development environment.
+
+2. **Make Your Changes**:
+   - **Create a Branch**: `git checkout -b feature/YourFeatureName`
+   - **Implement Your Changes**: Make sure to test your changes thoroughly.
+   - **Commit Your Changes**: Use clear commit messages, for example:
+     - For new features: `git commit -m "FEAT: Add some AmazingFeature"`
+     - For bug fixes: `git commit -m "FIX: Resolve Issue #123"`
+     - For documentation: `git commit -m "DOCS: Update README with new instructions"`
+     - For refactors: `git commit -m "REFACTOR: Enhance component for better aspect"`
+     - For snapshots: `git commit -m "SNAPSHOT: Temporary commit to save the current state for later reference"`
+   - See more about crafting commit messages in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
+
+3. **Submit Your Contribution**:
+   - **Push Your Changes**: `git push origin feature/YourFeatureName`
+   - **Open a Pull Request (PR)**: Navigate to the repository on GitHub and open a PR with a detailed description of your changes.
+
+4. **Stay Engaged**: Respond to any feedback from the project maintainers and make necessary adjustments to your PR.
+
+5. **Celebrate**: Once your PR is merged, celebrate your contribution to the project!
 
 ## License
 This project is licensed under the [Creative Commons Zero v1.0 Universal](LICENSE), which allows you to use, modify, distribute, and sublicense this code, even for commercial purposes, as long as you include the original copyright notice and attribute you as the original author for the repository. See the [LICENSE](LICENSE) file for more details.
