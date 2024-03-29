@@ -216,7 +216,7 @@ Please follow these guidelines to make your contributions smooth and effective:
      - For new features: `git commit -m "FEAT: Add some AmazingFeature"`
      - For bug fixes: `git commit -m "FIX: Resolve Issue #123"`
      - For documentation: `git commit -m "DOCS: Update README with new instructions"`
-     - For refactors: `git commit -m "REFACTOR: Enhance component for better aspect"`
+     - For refactorings: `git commit -m "REFACTOR: Enhance component for better aspect"`
      - For snapshots: `git commit -m "SNAPSHOT: Temporary commit to save the current state for later reference"`
    - See more about crafting commit messages in the [CONTRIBUTING.md](CONTRIBUTING.md) file.
 
