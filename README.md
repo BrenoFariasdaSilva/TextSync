@@ -19,7 +19,7 @@ This project is being deployed in [Fly.io](https://fly.io/) and can be accessed 
 ![GitHub Code Size in Bytes](https://img.shields.io/github/languages/code-size/BrenoFariasdaSilva/TextSync)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/BrenoFariasdaSilva/TextSync)
 ![GitHub](https://img.shields.io/github/license/BrenoFariasdaSilva/TextSync)
-![wakatime](https://wakatime.com/badge/github/BrenoFariasdaSilva/TextSync.svg)
+![wakatime](https://wakatime.com/badge/user/28f6c354-43b3-4634-8ec1-631893fe27d0/project/a2ef14a0-d4fa-46c7-bfc8-6d3f399701eb.svg)
 
 </div>
 
